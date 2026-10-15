@@ -186,7 +186,7 @@
       padding: var(--py) 0;
       background:
         linear-gradient(rgba(11,11,38,.62), rgba(11,11,38,.74)),
-        url('img/hero-tarragona.jpg') center / cover no-repeat,
+        url('/img/hero-tarragona.jpg') center / cover no-repeat,
         var(--navy);
       text-align: center;
     }
@@ -235,17 +235,32 @@
       padding: clamp(1.25rem, 4vw, 2.5rem);
     }
     .formbox .lead { margin-bottom: 1.5rem; color: var(--muted); font-size: clamp(.95rem, 2.2vw, 1.05rem); }
-    .form-embed { width: 100%; min-height: 600px; border: 0; display: block; }
-    .form-placeholder {
-      border: 1px dashed var(--gold); padding: 1.5rem 1.25rem;
-      font-size: .88rem; color: var(--muted);
+    .formbox form { display: grid; gap: 1rem; }
+    .f-row { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 600px) { .f-row--2 { grid-template-columns: 1fr 1fr; } }
+    .f-field { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+    .f-field label, .f-field legend { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); font-weight: 500; }
+    .f-field .opt { color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 300; }
+    .f-field input, .f-field select, .f-field textarea {
+      width: 100%; font: inherit; font-size: 1rem; font-weight: 300; color: var(--ink);
+      background: var(--white); border: 1px solid var(--line); border-radius: 0;
+      padding: .8rem .9rem; min-height: 48px; appearance: none; -webkit-appearance: none;
     }
-    .form-placeholder strong { color: var(--ink); }
-    .form-placeholder code {
-      display: block; margin-top: .8rem; padding: .75rem 1rem;
-      background: var(--sand); font-size: .74rem; color: var(--navy);
-      white-space: pre-wrap; word-break: break-all;
+    .f-field select {
+      background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+      background-position: calc(100% - 20px) 55%, calc(100% - 15px) 55%;
+      background-size: 5px 5px; background-repeat: no-repeat; padding-right: 2.5rem;
     }
+    .f-field textarea { min-height: 96px; resize: vertical; }
+    .f-field input:focus, .f-field select:focus, .f-field textarea:focus { outline: 2px solid var(--gold); outline-offset: 0; border-color: var(--gold); }
+    .f-check { display: flex; gap: .7rem; align-items: flex-start; font-size: .85rem; color: var(--muted); line-height: 1.5; }
+    .f-check input { width: 20px; height: 20px; min-height: 0; margin-top: .15rem; flex: none; accent-color: var(--navy); }
+    .f-check a { color: var(--gold-ink); text-decoration: underline; }
+    .f-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+    .f-msg { padding: .9rem 1rem; font-size: .92rem; display: none; }
+    .f-msg.ok { display: block; background: var(--sand); border-left: 4px solid var(--gold); color: var(--navy); }
+    .f-msg.err { display: block; background: #FBEAEA; border-left: 4px solid #B3261E; color: #7A1A14; }
+    .formbox .btn[disabled] { opacity: .6; cursor: wait; }
     .formbox .micro { margin-top: 1rem; }
     .formbox .micro a { text-decoration: underline; color: var(--gold-ink); }
 
@@ -438,29 +453,67 @@
         <div class="formbox">
           <p class="lead">Te digo cuánto puedes pedir, qué documentación te falta y qué pasos exactos debes dar para vender con seguridad en Tarragona.</p>
 
-          <!--
-          ═══════════════════════════════════════════════════════
-          CÓMO INSERTAR EL FORMULARIO DE GOOGLE FORMS
-          ═══════════════════════════════════════════════════════
-          1. Crea el formulario con estos campos:
-             · Nombre  · Teléfono  · Email
-             · Zona de Tarragona (Eixample / Part Alta / Sant Pere i Sant Pau / Bonavista / Otros)
-             · Tipo (Piso / Casa)  · m² y habitaciones  · Estado (Actualizado / Para reformar)
-             · ¿Hay hipoteca o herencia? (opcional)
-             · CASILLA OBLIGATORIA: "Soy mayor de 16 años y he leído y acepto la Política de privacidad"
-          2. Enviar → pestaña "<>" → copia solo la URL del src del iframe
-          3. Borra el bloque <div class="form-placeholder"> y pega:
-             <iframe class="form-embed" src="TU_URL_DE_GOOGLE_FORMS" title="Formulario de valoración Tarragona">Cargando…</iframe>
-          ═══════════════════════════════════════════════════════
-          -->
-          <div class="form-placeholder">
-            <strong>Aquí va el formulario de Google Forms</strong>
-            <code>&lt;iframe class="form-embed"
-  src="https://docs.google.com/forms/d/e/TU_FORM_ID/viewform?embedded=true"
-  title="Formulario de valoración Tarragona"&gt;
-  Cargando…
-&lt;/iframe&gt;</code>
-          </div>
+          <form id="lead-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- CLAVE de Web3Forms: clave de Web3Forms (se recibe por email al registrarse en web3forms.com con el email de Sonia) -->
+            <input type="hidden" name="access_key" value="51fa0819-973a-4dfc-8243-e683beb37d94">
+            <input type="hidden" name="subject" value="Nueva valoración — Tarragona">
+            <input type="hidden" name="from_name" value="Landing vender.tucasapro.es">
+            <input type="hidden" name="municipio" value="Tarragona">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="pagina" value="">
+            <input type="checkbox" name="botcheck" class="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="f-row f-row--2">
+              <div class="f-field"><label for="f-nombre">Nombre</label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
+              <div class="f-field"><label for="f-tel">Teléfono</label>
+                <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            </div>
+            <div class="f-field"><label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required></div>
+
+            <div class="f-row f-row--2">
+              <div class="f-field"><label for="f-zona">Zona de Tarragona</label>
+                <select id="f-zona" name="zona" required>
+                  <option value="">Selecciona…</option>
+                  <option>Eixample</option><option>Part Alta</option>
+                  <option>Sant Pere i Sant Pau</option><option>Bonavista</option><option>Otros</option>
+                </select></div>
+              <div class="f-field"><label for="f-tipo">Tipo de inmueble</label>
+                <select id="f-tipo" name="tipo" required>
+                  <option value="">Selecciona…</option><option>Piso</option><option>Casa</option>
+                </select></div>
+            </div>
+            <div class="f-row f-row--2">
+              <div class="f-field"><label for="f-m2">Metros cuadrados</label>
+                <input id="f-m2" name="m2" type="number" min="1" inputmode="numeric" required></div>
+              <div class="f-field"><label for="f-hab">Habitaciones</label>
+                <input id="f-hab" name="habitaciones" type="number" min="0" inputmode="numeric" required></div>
+            </div>
+            <div class="f-field"><label for="f-estado">Estado</label>
+              <select id="f-estado" name="estado" required>
+                <option value="">Selecciona…</option><option>Actualizado</option><option>Para reformar</option>
+              </select></div>
+            <div class="f-field"><label for="f-hip">¿Hay hipoteca o herencia? <span class="opt">(opcional)</span></label>
+              <select id="f-hip" name="hipoteca_herencia">
+                <option value="">Prefiero comentarlo luego</option><option>Hipoteca</option><option>Herencia</option><option>Ninguna</option>
+              </select></div>
+            <div class="f-field"><label for="f-msg">Algo más que quieras contarme <span class="opt">(opcional)</span></label>
+              <textarea id="f-msg" name="mensaje"></textarea></div>
+
+            <label class="f-check">
+              <input type="checkbox" name="consentimiento" value="Acepta" required>
+              <span>Soy mayor de 16 años y he leído y acepto la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>.</span>
+            </label>
+
+            <div class="h-captcha" data-captcha="true"></div>
+
+            <button type="submit" class="btn btn--navy" id="f-submit">Quiero mi valoración</button>
+            <div id="f-result" class="f-msg" role="status" aria-live="polite"></div>
+          </form>
+          <script src="https://web3forms.com/client/script.js" async defer></script>
 
           <p class="micro">Al enviar aceptas la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/">política de privacidad</a>. Sin spam. Puedes darte de baja cuando quieras.</p>
         </div>
@@ -615,6 +668,45 @@
         save('no'); banner.hidden = true;
       });
     })();
+
+    /* Formulario Web3Forms */
+    (function () {
+      var form = document.getElementById('lead-form');
+      if (!form) return;
+      var res = document.getElementById('f-result');
+      var btn = document.getElementById('f-submit');
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+        if (q.get(k)) form.elements[k].value = q.get(k);
+      });
+      form.elements['pagina'].value = location.href.split('#')[0];
+
+      function show(cls, txt) { res.className = 'f-msg ' + cls; res.textContent = txt; }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        var cap = form.querySelector('textarea[name=h-captcha-response]');
+        if (cap && !cap.value) { show('err', 'Marca la casilla de verificación "No soy un robot" antes de enviar.'); return; }
+        var data = {};
+        new FormData(form).forEach(function (v, k) { data[k] = v; });
+        btn.disabled = true; var label = btn.textContent; btn.textContent = 'Enviando…';
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(function (r) { return r.json().then(function (j) { return { ok: r.status === 200, j: j }; }); })
+          .then(function (o) {
+            if (o.ok) {
+              form.reset(); show('ok', '¡Recibido! Sonia te contactará en menos de 24 h laborables con tu valoración.');
+              if (window.gtag) gtag('event', 'generate_lead', { municipio: 'tarragona' });
+            } else { show('err', (o.j && o.j.message) || 'No se pudo enviar. Inténtalo de nuevo o llama al 640 87 25 14.'); }
+          })
+          .catch(function () { show('err', 'Error de conexión. Inténtalo de nuevo o llama al 640 87 25 14.'); })
+          .then(function () { btn.disabled = false; btn.textContent = label; });
+      });
+    })();
+
   </script>
 
 </body>
