@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <!--
+  ═══════════════════════════════════════════════════════════════
+  PLANTILLA DE LANDING · TuCasaPro (Sonia Guirao)
+  Para replicar en otro municipio cambia SOLO lo marcado con ★:
+   ★ <title>, meta description, canonical, og:url, og:title
+   ★ JSON-LD: "url" y textos del FAQ (deben coincidir con el FAQ visible)
+   ★ H1, textos con el nombre del municipio y zonas del desplegable
+   ★ Campos ocultos: subject y municipio
+   ★ MUNICIPIO_SLUG en el script final (Analytics)
+   ★ Mensaje de WhatsApp (?text=...)
+  Rutas de imágenes y fuentes siempre absolutas: /img/... y /fonts/...
+  ═══════════════════════════════════════════════════════════════
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B0B26">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Vender piso en Salou | Valoración gratuita y plan de venta</title>
+  <meta name="description" content="¿Vendes tu apartamento o casa en Salou? Valoración gratuita y plan de venta en 1 página, con la licencia turística y la comunidad revisadas. Trato directo con Sonia. Respuesta en 24–48 h.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vender.tucasapro.es/salou/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="TuCasaPro · Sonia Guirao">
+  <meta property="og:title" content="Vender piso en Salou | Valoración gratuita y plan de venta">
+  <meta property="og:description" content="Valoración gratuita + plan de venta en 1 página para vender en Salou: apartamentos turísticos, segundas residencias y vivienda habitual.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vender.tucasapro.es/salou/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.tucasapro.es/images/user-seo/user-seo-252146.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Imagen principal: se pide con prioridad para mejorar el LCP (Core Web Vitals) -->
+  <link rel="preload" as="image" href="/img/hero-salou.jpg" fetchpriority="high">
+
+  <!-- Schema: entidades (página, servicio, agente, persona). ★ Cambiar url, nombre de ciudad y fechas en cada landing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://vender.tucasapro.es/salou/#webpage",
+        "url": "https://vender.tucasapro.es/salou/",
+        "name": "Vender piso en Salou | Valoración gratuita y plan de venta",
+        "inLanguage": "es-ES",
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-15",
+        "about": { "@id": "https://vender.tucasapro.es/salou/#servicio" },
+        "author": { "@id": "https://vender.tucasapro.es/#sonia" },
+        "publisher": { "@id": "https://vender.tucasapro.es/#agente" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "TuCasaPro", "item": "https://www.tucasapro.es/" },
+            { "@type": "ListItem", "position": 2, "name": "Vender en Salou", "item": "https://vender.tucasapro.es/salou/" }
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://vender.tucasapro.es/salou/#servicio",
+        "name": "Valoración y plan de venta de viviendas en Salou",
+        "serviceType": "Valoración inmobiliaria y venta de pisos y casas",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Valoración gratuita y sin compromiso" },
+        "provider": { "@id": "https://vender.tucasapro.es/#agente" },
+        "areaServed": { "@type": "City", "name": "Salou", "containedInPlace": { "@type": "AdministrativeArea", "name": "Tarragonès, Tarragona" } }
+      },
+      {
+        "@type": ["RealEstateAgent", "LocalBusiness"],
+        "@id": "https://vender.tucasapro.es/#agente",
+        "name": "Sonia Guirao — TuCasaPro",
+        "url": "https://www.tucasapro.es/",
+        "telephone": "+34640872514",
+        "email": "vender@tucasapro.es",
+        "image": "https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp",
+        "logo": "https://www.tucasapro.es/images/opt/user-logo/logo-6696.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vila-seca",
+          "postalCode": "43480",
+          "addressRegion": "Tarragona",
+          "addressCountry": "ES"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Tarragona" },
+          { "@type": "City", "name": "Reus" },
+          { "@type": "City", "name": "Vila-seca" },
+          { "@type": "Place", "name": "La Pineda" },
+          { "@type": "City", "name": "Salou" },
+          { "@type": "City", "name": "Cambrils" }
+        ],
+        "founder": { "@id": "https://vender.tucasapro.es/#sonia" },
+        "memberOf": { "@type": "Organization", "name": "eXp Realty" },
+        "sameAs": ["https://www.tucasapro.es/"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://vender.tucasapro.es/#sonia",
+        "name": "Sonia Guirao",
+        "jobTitle": "Asesora inmobiliaria",
+        "image": "https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp",
+        "worksFor": { "@type": "Organization", "name": "eXp Realty" },
+        "url": "https://www.tucasapro.es/",
+        "sameAs": ["https://www.tucasapro.es/"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQ (mismo texto que el visible en la página) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Cuánto vale mi apartamento en Salou?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de la zona (primera línea, Cap Salou, el centro o Barenys no se valoran igual), las vistas, la planta, si la comunidad tiene piscina, el exterior, el estado y la demanda real del momento. Te doy un rango defendible y el porqué, basado en operaciones reales de tu zona."}},
+      {"@type": "Question", "name": "¿Puedo vender mi piso turístico en Salou con la licencia?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, se puede vender. Lo importante es explicar bien la situación de la licencia: Salou está dentro del régimen del Decreto-ley 3/2023 de Cataluña y las estimaciones publicadas en 2025 lo señalan como uno de los municipios con más licencias afectadas de cara a 2028. Antes de fijar el precio reviso contigo la situación concreta de la tuya."}},
+      {"@type": "Question", "name": "¿Qué tengo que revisar de la comunidad antes de vender?", "acceptedAnswer": {"@type": "Answer", "text": "El certificado de que estás al corriente de pagos y las actas de las últimas juntas, por si hay derramas aprobadas o pendientes (piscina, fachada, ascensor). El comprador lo va a preguntar, y es mejor tener la respuesta antes de negociar."}},
+      {"@type": "Question", "name": "Vivo fuera de España: ¿cómo funciona la venta?", "acceptedAnswer": {"@type": "Answer", "text": "Si eres no residente, el comprador retiene el 3 % del precio y lo ingresa en Hacienda con el modelo 211, a cuenta de tu impuesto por la ganancia. Si no puedes venir a la notaría, se puede firmar con un poder notarial. Lo planificamos con tiempo y con tu asesor fiscal."}},
+      {"@type": "Question", "name": "¿Qué papeles necesito para vender en Salou?", "acceptedAnswer": {"@type": "Answer", "text": "Cédula de habitabilidad, certificado de eficiencia energética, certificado de aptitud de la inspección técnica si el edificio está obligado, certificado de deudas con la comunidad, escritura y nota simple. En apartamentos que se usan poco es habitual que algún certificado esté caducado."}},
+      {"@type": "Question", "name": "¿Qué pasa si todavía no sé si quiero vender?", "acceptedAnswer": {"@type": "Answer", "text": "Perfecto: hago la valoración gratuita y el plan, y decides con perspectiva real. Sin presión y sin compromiso."}}
+    ]
+  }
+  </script>
+
+  <!-- Roboto alojada en el propio dominio (sin enviar la IP del visitante a Google).
+       Sube los 4 archivos .woff2 a la carpeta /fonts/ del repositorio. -->
+  <link rel="preload" href="/fonts/roboto-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 300; font-display: swap; src: url('/fonts/roboto-latin-300-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/roboto-latin-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/roboto-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/roboto-latin-700-normal.woff2') format('woff2'); }
+
+    /* ═════════ TOKENS ═════════
+       Colores aproximados a partir de capturas de tucasapro.es.
+       Compruébalos con el cuentagotas de Chrome y ajusta aquí si hace falta. */
+    :root {
+      --gold:     #B59A5B;
+      --gold-ink: #7C6430;   /* dorado oscuro para texto sobre blanco */
+      --navy:     #0B0B26;
+      --navy-2:   #15153A;
+      --ink:      #17172E;
+      --muted:    #5B5B6B;
+      --sand:     #F5F2EC;
+      --line:     #E2DCCE;
+      --white:    #FFFFFF;
+      --font:     'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --py:       clamp(3rem, 7vw, 5.5rem);
+      --header-h: 72px;
+    }
+
+    /* ═════════ RESET ═════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+    .on-dark :focus-visible { outline-color: var(--white); }
+    [id] { scroll-margin-top: calc(var(--header-h) + 8px); }
+    .skip { position: absolute; left: 1rem; top: -100px; z-index: 300; background: var(--navy); color: var(--white); padding: .6rem 1rem; }
+    .skip:focus { top: 1rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    /* ═════════ LAYOUT: contenedor al 90% ═════════ */
+    .wrap        { width: min(90%, 1100px); margin-inline: auto; }
+    .wrap--text  { width: min(90%, 760px);  margin-inline: auto; }
+    .sec         { padding: var(--py) 0; }
+    .sec--sand   { background: var(--sand); }
+    .sec--gold   { background: var(--gold); }
+    .sec--navy   { background: var(--navy); color: var(--white); }
+
+    /* ═════════ TIPOGRAFÍA ═════════ */
+    h1, h2, h3 { font-weight: 300; line-height: 1.2; letter-spacing: -.01em; }
+    h1 { font-size: clamp(1.9rem, 5.6vw, 3.5rem); }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+    h3 { font-size: clamp(1.05rem, 2.4vw, 1.25rem); font-weight: 500; letter-spacing: 0; }
+    .center { text-align: center; }
+    .lead { font-size: clamp(1rem, 2.4vw, 1.2rem); font-weight: 300; line-height: 1.7; }
+    .micro { font-size: .8rem; opacity: .75; }
+
+    /* ═════════ BOTONES: 100% en móvil, automático desde 520px ═════════ */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: .95em 1.5em;
+      border: 1px solid transparent;
+      border-radius: 0;
+      font: 500 .88rem/1.35 var(--font);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color .18s, color .18s, border-color .18s;
+    }
+    .btn--gold { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .btn--gold:hover { background: #C8AF71; border-color: #C8AF71; }
+    .btn--navy { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .btn--navy:hover { background: var(--navy-2); }
+    .btn--line { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+    .btn--line:hover { background: rgba(255,255,255,.12); }
+    .btn--ghost { background: transparent; color: var(--navy); border-color: var(--line); }
+    .btn--ghost:hover { border-color: var(--navy); }
+
+    .actions { display: flex; flex-direction: column; gap: .75rem; }
+    @media (min-width: 520px) {
+      .btn { display: inline-block; width: auto; }
+      .actions { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    }
+
+    /* ═════════ CABECERA FIJA (logo + CTA) ═════════ */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white); border-bottom: 1px solid var(--line);
+    }
+    .topbar__in {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: .5rem 0; min-height: var(--header-h);
+    }
+    .brand img {
+      height: clamp(44px, 8vw, 60px);
+      width: auto; max-width: 58vw; object-fit: contain;
+    }
+    .topbar__cta { width: auto; display: inline-block; padding: .7em 1.1em; font-size: .74rem; flex: none; }
+
+    /* Barra dorada: navegación interna (no saca al visitante de la landing) */
+    .goldbar { background: var(--gold); }
+    .goldbar ul {
+      list-style: none; display: flex; flex-wrap: wrap;
+      justify-content: center; gap: .1rem 1.4rem; padding: .7rem 0;
+    }
+    @media (min-width: 800px) { .goldbar ul { justify-content: flex-end; } }
+    .goldbar a {
+      color: var(--navy); font-size: clamp(.8rem, 2.3vw, .95rem);
+      padding: .2rem 0; border-bottom: 1px solid transparent;
+    }
+    .goldbar a:hover { border-color: var(--navy); }
+
+    /* ═════════ HERO ═════════
+       Foto: sube /img/hero-salou.jpg (1920×1080, <300 KB).
+       Sin foto se ve el azul oscuro. */
+    .hero {
+      color: var(--white);
+      display: flex; align-items: center;
+      min-height: clamp(460px, 74vh, 700px);
+      padding: var(--py) 0;
+      background:
+        linear-gradient(rgba(11,11,38,.62), rgba(11,11,38,.74)),
+        url('/img/hero-salou.jpg') center / cover no-repeat,
+        var(--navy);
+      text-align: center;
+    }
+    .hero h1 { max-width: 22ch; margin: 0 auto 1.1rem; }
+    .hero .lead { max-width: 52ch; margin: 0 auto 2rem; color: rgba(255,255,255,.88); }
+    .hero .micro { margin-top: 1.1rem; color: rgba(255,255,255,.75); opacity: 1; }
+
+    /* Franja de mercado */
+    .band { background: var(--sand); padding: clamp(2rem, 5vw, 3.25rem) 0; }
+    .band p {
+      max-width: 62ch; margin: 0 auto; text-align: center;
+      font-size: clamp(1.05rem, 2.6vw, 1.3rem); font-weight: 300; line-height: 1.6;
+    }
+    .band strong { font-weight: 500; }
+
+    /* ═════════ SONIA ═════════ */
+    .sonia { display: grid; gap: 2rem; align-items: center; }
+    @media (min-width: 760px) {
+      .sonia { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3.5rem; }
+    }
+    .sonia__photo { width: 100%; max-width: 400px; margin-inline: auto; }
+    .sonia h2 { margin-bottom: .25rem; }
+    .sonia__role { color: var(--gold-ink); font-weight: 500; margin-bottom: 1.25rem; }
+    .sonia__lead { font-weight: 500; margin-bottom: .9rem; }
+    .sonia p + p { margin-top: .9rem; }
+    .sonia .actions { justify-content: flex-start; margin-top: 1.5rem; }
+
+    /* ═════════ PILARES ═════════ */
+    .grid3 { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 2rem; }
+    @media (min-width: 640px) {
+      .grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+    }
+    .pillar {
+      background: var(--white);
+      border-top: 3px solid var(--gold);
+      padding: 1.5rem 1.25rem 1.6rem;
+    }
+    .pillar h3 { margin-bottom: .5rem; }
+    .pillar p { font-size: .95rem; color: var(--muted); }
+
+    /* ═════════ FORMULARIO (2 pasos) ═════════ */
+    .sec--gold h2 { color: var(--navy); }
+    .formbox {
+      background: var(--white);
+      max-width: 720px; margin: 1.75rem auto 0;
+      padding: clamp(1.25rem, 4vw, 2.5rem);
+    }
+    .formbox .lead { margin-bottom: 1.25rem; color: var(--muted); font-size: clamp(.95rem, 2.2vw, 1.05rem); }
+    .formbox form { display: grid; gap: 1rem; }
+    .f-step { border: 0; display: grid; gap: 1rem; min-width: 0; }
+    .f-step__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); }
+    .f-step__title { font-size: 1.05rem; font-weight: 500; color: var(--navy); }
+    .f-step__count { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-ink); white-space: nowrap; }
+    .f-nav { display: flex; flex-direction: column-reverse; gap: .75rem; }
+    @media (min-width: 520px) { .f-nav { flex-direction: row; justify-content: space-between; align-items: center; } }
+    .f-row { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 600px) { .f-row--2 { grid-template-columns: 1fr 1fr; } }
+    .f-field { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+    .f-field label { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); font-weight: 500; }
+    .f-field .opt { color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 300; }
+    .f-field input, .f-field select, .f-field textarea {
+      width: 100%; font: inherit; font-size: 1rem; font-weight: 300; color: var(--ink);
+      background: var(--white); border: 1px solid #C9C1AE; border-radius: 0;
+      padding: .8rem .9rem; min-height: 48px; appearance: none; -webkit-appearance: none;
+    }
+    .f-field select {
+      background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+      background-position: calc(100% - 20px) 55%, calc(100% - 15px) 55%;
+      background-size: 5px 5px; background-repeat: no-repeat; padding-right: 2.5rem;
+    }
+    .f-field textarea { min-height: 96px; resize: vertical; }
+    .f-field input:focus, .f-field select:focus, .f-field textarea:focus { outline: 2px solid var(--navy); outline-offset: 0; border-color: var(--navy); }
+    .f-check { display: flex; gap: .7rem; align-items: flex-start; font-size: .85rem; color: var(--muted); line-height: 1.5; cursor: pointer; }
+    .f-check input { width: 20px; height: 20px; margin-top: .15rem; flex: none; accent-color: var(--navy); }
+    .f-check a { color: var(--gold-ink); text-decoration: underline; }
+    .f-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+    .f-trust { font-size: .8rem; color: var(--muted); text-align: center; }
+    .f-msg { padding: .9rem 1rem; font-size: .92rem; display: none; }
+    .f-msg.ok { display: block; background: var(--sand); border-left: 4px solid var(--gold); color: var(--navy); }
+    .f-msg.ok a { text-decoration: underline; color: var(--gold-ink); }
+    .f-msg.err { display: block; background: #FBEAEA; border-left: 4px solid #B3261E; color: #7A1A14; }
+    .formbox .btn[disabled] { opacity: .6; cursor: wait; }
+    .rgpd { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .74rem; line-height: 1.55; color: var(--muted); }
+    .rgpd strong { color: var(--ink); font-weight: 500; }
+    .rgpd a { text-decoration: underline; color: var(--gold-ink); }
+
+    /* ═════════ PAPELES Y COSTES (contenido local) ═════════ */
+    .docs { display: grid; gap: 1.5rem; margin-top: 2rem; }
+    @media (min-width: 760px) { .docs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; } }
+    @media (min-width: 1080px) { .docs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    .docs__card { background: var(--white); border-top: 3px solid var(--gold); padding: 1.5rem 1.25rem; }
+    .docs__card h3 { margin-bottom: 1rem; }
+    .docs__list { list-style: none; display: grid; gap: .85rem; }
+    .docs__list li { padding-left: 1.4rem; position: relative; font-size: .95rem; }
+    .docs__list li::before { content: ''; position: absolute; left: 0; top: .6em; width: .5rem; height: .5rem; background: var(--gold); }
+    .docs__list strong { font-weight: 500; display: block; }
+    .docs__list span { color: var(--muted); }
+    .docs__note { margin-top: 1.5rem; font-size: .82rem; color: var(--muted); }
+    .docs__note summary { cursor: pointer; display: inline; text-decoration: underline; color: var(--gold-ink); }
+    .docs__note details[open] summary { margin-right: .4rem; }
+    .docs__note p { margin-top: .5rem; }
+    .docs__note a { color: var(--gold-ink); text-decoration: underline; }
+
+    /* ═════════ ZONAS (enlaces internos) ═════════ */
+    .zonas { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-top: 1.25rem; }
+    .zonas a, .zonas span { display: inline-block; padding: .5rem 1rem; border: 1px solid var(--line); font-size: .9rem; }
+    .zonas a:hover { border-color: var(--navy); }
+    .zonas [aria-current] { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* ═════════ PROCESO ═════════ */
+    .steps { counter-reset: step; list-style: none; margin-top: 2rem; display: grid; gap: .75rem; }
+    .steps li {
+      counter-increment: step;
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1.1rem 1.25rem; border: 1px solid var(--line); background: var(--white);
+    }
+    .steps li::before {
+      content: counter(step);
+      flex: 0 0 2rem; height: 2rem; display: grid; place-items: center;
+      background: var(--navy); color: var(--gold); font-weight: 500; font-size: .9rem;
+    }
+    .steps strong { display: block; font-weight: 500; }
+    .steps span { font-size: .92rem; color: var(--muted); }
+
+    /* ═════════ FAQ ═════════ */
+    .faq { list-style: none; margin-top: 2rem; border-top: 1px solid var(--line); }
+    .faq__item { border-bottom: 1px solid var(--line); }
+    .faq__q {
+      width: 100%; background: none; border: 0; text-align: left; cursor: pointer;
+      padding: 1.1rem .25rem; color: var(--ink);
+      font: 500 clamp(.95rem, 2.4vw, 1.05rem)/1.4 var(--font);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq__q::after {
+      content: '+'; flex: 0 0 1.4rem; text-align: center;
+      font-size: 1.5rem; font-weight: 300; color: var(--gold-ink);
+      transition: transform .2s;
+    }
+    .faq__item.open .faq__q::after { transform: rotate(45deg); }
+    .faq__a { max-height: 0; overflow: hidden; transition: max-height .28s ease; }
+    .faq__a p { padding: 0 .25rem 1.15rem; color: var(--muted); font-size: .95rem; }
+
+    /* ═════════ CIERRE ═════════ */
+    .closing { text-align: center; }
+    .closing h2 { max-width: 20ch; margin: 0 auto 1rem; }
+    .closing .lead { max-width: 46ch; margin: 0 auto 2rem; color: rgba(255,255,255,.8); }
+    .closing .micro { margin-top: 1rem; color: rgba(255,255,255,.7); opacity: 1; }
+
+    /* ═════════ CONTACTO (franja dorada) ═════════ */
+    .contact { background: var(--gold); color: var(--navy); padding: clamp(2.25rem, 5vw, 3.5rem) 0; }
+    .contact__grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; text-align: center; }
+    @media (min-width: 720px) {
+      .contact__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); text-align: left; }
+    }
+    .contact dt { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .2rem; }
+    .contact dd { font-size: clamp(1.05rem, 2.6vw, 1.3rem); font-weight: 300; overflow-wrap: anywhere; }
+    .contact a:hover { text-decoration: underline; }
+
+    /* ═════════ FOOTER ═════════ */
+    footer { background: var(--navy); color: rgba(255,255,255,.65); font-size: .8rem; padding: 1.5rem 0 5rem; text-align: center; }
+    footer ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.25rem; margin-bottom: .6rem; }
+    footer a, .linkbtn { color: rgba(255,255,255,.85); text-decoration: underline; }
+    .linkbtn { background: none; border: 0; font: inherit; cursor: pointer; padding: 0; }
+    footer a:hover, .linkbtn:hover { color: var(--gold); }
+
+    /* ═════════ WHATSAPP FLOTANTE ═════════ */
+    .wa {
+      position: fixed; z-index: 150;
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      width: 3.4rem; height: 3.4rem; display: grid; place-items: center;
+      background: var(--navy); color: var(--gold); border: 1px solid var(--gold);
+    }
+    .wa:hover { background: var(--navy-2); }
+
+    /* ═════════ AVISO DE COOKIES ═════════ */
+    .cookies {
+      position: fixed; z-index: 200; left: 0; right: 0; bottom: 0;
+      background: var(--navy); color: rgba(255,255,255,.9);
+      padding: 1rem 5%; font-size: .85rem; line-height: 1.55;
+      display: flex; flex-direction: column; gap: .85rem;
+      border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .cookies a { text-decoration: underline; color: var(--gold); }
+    .cookies__btns { display: flex; gap: .6rem; }
+    .cookies__btns .btn { flex: 1; width: auto; padding: .7em 1em; font-size: .78rem; }
+    @media (min-width: 720px) {
+      .cookies { flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; }
+      .cookies__btns { flex: 0 0 auto; }
+      .cookies__btns .btn { flex: 0 0 auto; min-width: 8.5rem; }
+    }
+
+    /* ═════════ MOVIMIENTO ═════════ */
+    .hero .wrap { animation: rise .6s ease both; }
+    @keyframes rise { from { transform: translateY(12px); } to { transform: none; } }   /* sin opacidad: no retrasa el LCP */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="#valoracion" class="skip">Ir al formulario de valoración</a>
+
+  <!-- ═════════ CABECERA ═════════ -->
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="https://www.tucasapro.es/">
+        <img src="https://www.tucasapro.es/images/opt/user-logo/logo-6696.png?mtime=1769278746" alt="TuCasa Pro, asesoría inmobiliaria · eXp Realty">
+      </a>
+      <a href="#valoracion" class="btn btn--navy topbar__cta">Pedir valoración</a>
+    </div>
+  </header>
+
+  <nav class="goldbar" aria-label="Secciones de la página">
+    <div class="wrap">
+      <ul>
+        <li><a href="#sonia">Sobre mí</a></li>
+        <li><a href="#valoracion">Valoración</a></li>
+        <li><a href="#papeles">Licencia y comunidad</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═════════ HERO ═════════ -->
+    <section class="hero on-dark">
+      <div class="wrap">
+        <h1>Vende tu apartamento en Salou con la licencia, la comunidad y el precio claros.</h1>
+        <p class="lead">Valoración por zona y vistas, revisión de la licencia turística y de la comunidad, y un plan de venta que aguanta la negociación.</p>
+        <div class="actions">
+          <a href="#valoracion" class="btn btn--gold">Quiero mi valoración gratuita</a>
+          <a href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20quiero%20una%20valoraci%C3%B3n%20de%20mi%20vivienda%20en%20Salou" class="btn btn--line" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </div>
+        <p class="micro">Gratis y sin compromiso · Respuesta en 24–48 h · Trato directo con Sonia</p>
+      </div>
+    </section>
+
+    <div class="band">
+      <div class="wrap">
+        <p><strong>En Salou, quien compra pregunta por tres cosas:</strong> la licencia turística, la comunidad y el precio. Si las tienes resueltas antes de publicar, negocias desde arriba y no a la defensiva.</p>
+      </div>
+    </div>
+
+    <!-- ═════════ SONIA ═════════ -->
+    <section class="sec" id="sonia">
+      <div class="wrap sonia">
+        <img class="sonia__photo"
+             src="https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp?t=150014"
+             alt="Sonia Guirao, asesora inmobiliaria en TuCasaPro" loading="lazy" decoding="async">
+        <div>
+          <h2>Sonia Guirao</h2>
+          <p class="sonia__role">Asesora inmobiliaria · eXp Realty</p>
+          <p class="sonia__lead">Más de 20 años transformando la gestión en resultados. Tu tranquilidad, mi prioridad.</p>
+          <p>Vender hoy no es publicar y esperar. Es tener precio, papeles y estrategia alineados para que la operación avance sin bloqueos. Trato directo conmigo, sin call centers.</p>
+          <p><strong>Mis pilares:</strong> Confianza, Claridad y Compromiso.</p>
+          <div class="actions">
+            <a href="#valoracion" class="btn btn--navy">Pedir mi valoración</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ PILARES ═════════ -->
+    <section class="sec sec--sand">
+      <div class="wrap">
+        <h2 class="center">Lo que cambia cuando lo haces bien</h2>
+        <div class="grid3">
+          <article class="pillar">
+            <h3>Precio con cabeza</h3>
+            <p>Rango real por zona de Salou, teniendo en cuenta vistas, planta, piscina comunitaria, exterior y estado. No promedios genéricos que no defienden nada en la negociación.</p>
+          </article>
+          <article class="pillar">
+            <h3>Venta sin bloqueos</h3>
+            <p>Checklist documental desde el día 1 para que la operación no se caiga en notaría por un papel pendiente.</p>
+          </article>
+          <article class="pillar">
+            <h3>Visitas con intención</h3>
+            <p>Filtros profesionales para evitar curiosos y regateos eternos. Solo quien tiene intención real de comprar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ FORMULARIO ═════════ -->
+    <section id="valoracion" class="sec sec--gold">
+      <div class="wrap">
+        <h2 class="center">Valoración gratuita + Plan de Venta en 1 página</h2>
+        <div class="formbox">
+          <p class="lead">Te digo cuánto puedes pedir, qué documentación te falta (si falta algo) y qué pasos tocan para vender en Salou sin fricción.</p>
+
+          <form id="lead-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- Clave pública de Web3Forms (solo permite enviar, no leer) -->
+            <input type="hidden" name="access_key" value="51fa0819-973a-4dfc-8243-e683beb37d94">
+            <input type="hidden" name="subject" value="Nueva valoración — Salou">
+            <input type="hidden" name="from_name" value="Landing vender.tucasapro.es">
+            <input type="hidden" name="municipio" value="Salou">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_term" value="">
+            <input type="hidden" name="utm_content" value="">
+            <input type="hidden" name="pagina" value="">
+            <input type="checkbox" name="botcheck" class="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <!-- PASO 1: la vivienda (primero lo fácil, sin datos personales) -->
+            <fieldset class="f-step" id="f-step-1">
+              <legend class="sr-only">Paso 1 de 2: tu vivienda</legend>
+              <div class="f-step__head" aria-hidden="true"><span class="f-step__title">Tu vivienda</span><span class="f-step__count">Paso 1 de 2</span></div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-zona">Zona de Salou</label>
+                  <select id="f-zona" name="zona" required>
+                    <option value="">Selecciona…</option>
+                    <option>Centro</option><option>Platja de Llevant</option><option>Platja de Ponent</option>
+                    <option>Cap Salou</option><option>Barenys</option><option>Otra zona</option>
+                  </select></div>
+                <div class="f-field"><label for="f-calle">Calle <span class="opt">(sin número, opcional)</span></label>
+                  <input id="f-calle" name="calle" type="text" maxlength="80" autocomplete="off" placeholder="Ej. Carrer Major"></div>
+              </div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-tipo">Tipo de inmueble</label>
+                  <select id="f-tipo" name="tipo" required>
+                    <option value="">Selecciona…</option><option>Piso</option><option>Casa</option>
+                  </select></div>
+                <div class="f-field"><label for="f-estado">Estado</label>
+                  <select id="f-estado" name="estado" required>
+                    <option value="">Selecciona…</option><option>Reformado</option><option>Semirreformado</option><option>De origen</option>
+                  </select></div>
+              </div>
+              <div class="f-row f-row--2" id="f-piso">
+                <div class="f-field"><label for="f-planta">Planta</label>
+                  <select id="f-planta" name="planta" required>
+                    <option value="">Selecciona…</option><option>Bajos</option><option>1.ª</option><option>2.ª</option><option>3.ª</option><option>4.ª</option><option>5.ª o superior</option><option>Ático</option>
+                  </select></div>
+                <div class="f-field"><label for="f-ascensor">¿Tiene ascensor?</label>
+                  <select id="f-ascensor" name="ascensor" required>
+                    <option value="">Selecciona…</option><option>Sí</option><option>No</option>
+                  </select></div>
+              </div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-m2">Metros cuadrados</label>
+                  <input id="f-m2" name="m2" type="number" min="10" max="5000" step="1" inputmode="numeric" placeholder="Ej. 85" required></div>
+                <div class="f-field"><label for="f-hab">Habitaciones</label>
+                  <input id="f-hab" name="habitaciones" type="number" min="0" max="30" step="1" inputmode="numeric" placeholder="Ej. 3" required></div>
+              </div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-ext">Exterior</label>
+                  <select id="f-ext" name="exterior" required>
+                    <option value="">Selecciona…</option><option>Balcón</option><option>Terraza</option><option>Balcón y terraza</option><option>Ninguno</option>
+                  </select></div>
+                <div class="f-field"><label for="f-vistas">Vistas al mar</label>
+                  <select id="f-vistas" name="vistas_mar" required>
+                    <option value="">Selecciona…</option><option>Sí</option><option>Parciales</option><option>No</option>
+                  </select></div>
+              </div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-uso">Uso actual <span class="opt">(opcional)</span></label>
+                  <select id="f-uso" name="uso_actual">
+                    <option value="">Prefiero no decirlo</option><option>Vivienda habitual</option><option>Segunda residencia</option><option>Alquiler turístico (con licencia HUT)</option><option>Alquiler de temporada o larga duración</option><option>Vacía</option>
+                  </select></div>
+                <div class="f-field"><label for="f-piscina">Piscina comunitaria <span class="opt">(opcional)</span></label>
+                  <select id="f-piscina" name="piscina_comunitaria">
+                    <option value="">Selecciona…</option><option>Sí</option><option>No</option>
+                  </select></div>
+              </div>
+              <button type="button" class="btn btn--navy" id="f-next">Siguiente: dónde te envío la valoración</button>
+            </fieldset>
+
+            <!-- PASO 2: datos de contacto -->
+            <fieldset class="f-step" id="f-step-2">
+              <legend class="sr-only">Paso 2 de 2: tus datos de contacto</legend>
+              <div class="f-step__head" aria-hidden="true"><span class="f-step__title">¿Dónde te envío la valoración?</span><span class="f-step__count">Paso 2 de 2</span></div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-nombre">Nombre</label>
+                  <input id="f-nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required></div>
+                <div class="f-field"><label for="f-tel">Teléfono</label>
+                  <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" pattern="[0-9\+ \(\)\-]{9,20}" placeholder="600 123 456" title="Introduce un teléfono válido, por ejemplo 600 123 456" required></div>
+              </div>
+              <div class="f-field"><label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+              <div class="f-field"><label for="f-msg">Algo más que quieras contarme <span class="opt">(opcional: hipoteca, herencia, si vives fuera, plazos…)</span></label>
+                <textarea id="f-msg" name="mensaje" maxlength="1500"></textarea></div>
+
+              <label class="f-check">
+                <input type="checkbox" name="consentimiento" value="Acepta" required>
+                <span>Soy mayor de 16 años y he leído y acepto la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>.</span>
+              </label>
+
+              <div class="h-captcha" data-captcha="true" data-lang="es"></div>
+
+              <div class="f-nav">
+                <button type="button" class="btn btn--ghost" id="f-back">Atrás</button>
+                <button type="submit" class="btn btn--navy" id="f-submit">Quiero mi valoración gratuita</button>
+              </div>
+              <p class="f-trust">Gratis y sin compromiso · Respuesta en 24–48 h · Trato directo con Sonia</p>
+            </fieldset>
+          </form>
+          <div id="f-result" class="f-msg" role="status" aria-live="polite" tabindex="-1"></div>
+
+          <!-- Información básica de protección de datos (primera capa). Validar con Sonia / su asesor. -->
+          <p class="rgpd"><strong>Protección de datos.</strong> Responsable: Sonia Guirao (TuCasaPro). Finalidad: responder a tu solicitud de valoración y contactarte. Legitimación: tu consentimiento. Destinatarios: proveedores de recepción del formulario (Web3Forms) y verificación antispam (hCaptcha), con posibles transferencias internacionales con garantías adecuadas. Derechos: acceso, rectificación, supresión y demás derechos escribiendo a <a href="mailto:vender@tucasapro.es">vender@tucasapro.es</a>. Más información en la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ VENDER EN SALOU: licencia turística, comunidad y papeles (contenido local, con fuentes) ═════════ -->
+    <section class="sec sec--sand" id="papeles">
+      <div class="wrap">
+        <h2 class="center">Vender un apartamento en Salou: licencia, comunidad y papeles</h2>
+        <p class="lead center" style="max-width:62ch;margin:1rem auto 0">Salou es un mercado de apartamentos, segundas residencias y alquiler turístico. Estas son las preguntas que te hará el comprador; mejor llegar con las respuestas.</p>
+        <div class="docs">
+          <div class="docs__card">
+            <h3>Si tu piso tiene licencia turística (HUT)</h3>
+            <ul class="docs__list">
+              <li><strong>Salou, de los municipios más expuestos</strong><span>Está dentro del régimen del Decreto-ley 3/2023 y las estimaciones publicadas en 2025 lo situaban como el municipio catalán con más licencias afectadas de cara a 2028.</span></li>
+              <li><strong>Registro único estatal</strong><span>Desde 2025 existe un registro único para alquileres turísticos y de temporada. Un comprador inversor querrá ver que el tuyo está en regla.</span></li>
+              <li><strong>Precio honesto</strong><span>Valoro el piso como vivienda y te explico qué aporta hoy la licencia, sin inflar el precio con algo que el comprador no pueda asegurar.</span></li>
+            </ul>
+          </div>
+          <div class="docs__card">
+            <h3>La comunidad de propietarios</h3>
+            <ul class="docs__list">
+              <li><strong>Certificado de estar al corriente</strong><span>Lo emite el administrador de fincas y se entrega en la venta.</span></li>
+              <li><strong>Actas de las últimas juntas</strong><span>Por si hay derramas aprobadas o previstas (piscina, fachada, ascensor). Mejor saberlo antes de negociar.</span></li>
+              <li><strong>Gastos de comunidad</strong><span>Piscina, jardines y conserjería pesan en la decisión del comprador. Los presentamos claros desde el anuncio.</span></li>
+            </ul>
+          </div>
+          <div class="docs__card">
+            <h3>Papeles y costes del vendedor</h3>
+            <ul class="docs__list">
+              <li><strong>Cédula, certificado energético e ITE</strong><span>En apartamentos que se usan poco es habitual que alguno esté caducado o no se haya hecho nunca.</span></li>
+              <li><strong>Plusvalía municipal</strong><span>La paga el vendedor. Si el suelo no ha ganado valor entre la compra y la venta, no se paga.</span></li>
+              <li><strong>Si vives fuera de España</strong><span>El comprador retiene el 3 % del precio y lo ingresa en Hacienda (modelo 211), a cuenta de tu impuesto por la ganancia.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="docs__note">Información general, no asesoramiento legal ni fiscal. <details style="display:inline"><summary>Ver fuentes</summary><p><a href="https://www.diaridetarragona.com/costa/mas-regulacion-y-retirada-de-licencias-el-futuro-de-los-apartamentos-turisticos-PH22529723" target="_blank" rel="noopener">Diari de Tarragona (licencias turísticas en la Costa Daurada, 2025)</a>, <a href="https://www.cuatrecasas.com/es/spain/inmobiliario/art/tc-avala-decreto-ley-viviendas-turisticas-cataluna" target="_blank" rel="noopener">aval del Tribunal Constitucional al Decreto-ley 3/2023 (2025)</a>, <a href="https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/retenciones-irnr-sin-establecimiento-permanente/retencion-adquirente-inmueble.html" target="_blank" rel="noopener">Agencia Tributaria (retención a no residentes)</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2021-18276" target="_blank" rel="noopener">Real Decreto-ley 26/2021 (plusvalía)</a> y <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176" target="_blank" rel="noopener">Real Decreto 390/2021 (certificado energético)</a>.</p></details></div>
+      </div>
+    </section>
+
+    <!-- ═════════ PROCESO ═════════ -->
+    <section class="sec" id="como-funciona">
+      <div class="wrap--text">
+        <h2 class="center">Cómo funciona</h2>
+        <ol class="steps">
+          <li><div><strong>Mini diagnóstico</strong><span>Llamada de 10–15 min para entender tu situación y tu objetivo de venta.</span></div></li>
+          <li><div><strong>Valoración por microzona</strong><span>Operaciones reales de tu zona de Salou. Un rango defendible, no un número cogido del aire.</span></div></li>
+          <li><div><strong>Checklist documental</strong><span>Reviso los papeles y preparo el expediente de venta completo antes de publicar.</span></div></li>
+          <li><div><strong>Salida a mercado con estrategia</strong><span>Presentación, precio, filtros y canales para reducir al máximo las visitas inútiles.</span></div></li>
+          <li><div><strong>Negociación y cierre</strong><span>Te acompaño hasta la firma. Cierre seguro y sin fricciones.</span></div></li>
+        </ol>
+        <div class="actions" style="margin-top:2rem">
+          <a href="#valoracion" class="btn btn--navy">Empezar por la valoración</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ FAQ ═════════ -->
+    <section class="sec sec--sand" id="preguntas">
+      <div class="wrap--text">
+        <h2 class="center">Lo que suele preguntar quien vende en Salou</h2>
+        <ul class="faq">
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q1" aria-expanded="false" aria-controls="faq-1">¿Cuánto vale mi apartamento en Salou?</button>
+            <div class="faq__a" id="faq-1" role="region" aria-labelledby="faq-q1"><p>Depende de la zona (primera línea, Cap Salou, el centro o Barenys no se valoran igual), las vistas, la planta, si la comunidad tiene piscina, el exterior, el estado y la demanda real del momento. Te doy un rango defendible y el porqué, basado en operaciones reales de tu zona.</p></div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q2" aria-expanded="false" aria-controls="faq-2">¿Puedo vender mi piso turístico en Salou con la licencia?</button>
+            <div class="faq__a" id="faq-2" role="region" aria-labelledby="faq-q2"><p>Sí, se puede vender. Lo importante es explicar bien la situación de la licencia: Salou está dentro del régimen del Decreto-ley 3/2023 de Cataluña y las estimaciones publicadas en 2025 lo señalan como uno de los municipios con más licencias afectadas de cara a 2028. Antes de fijar el precio reviso contigo la situación concreta de la tuya.</p></div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q3" aria-expanded="false" aria-controls="faq-3">¿Qué tengo que revisar de la comunidad antes de vender?</button>
+            <div class="faq__a" id="faq-3" role="region" aria-labelledby="faq-q3"><p>El certificado de que estás al corriente de pagos y las actas de las últimas juntas, por si hay derramas aprobadas o pendientes (piscina, fachada, ascensor). El comprador lo va a preguntar, y es mejor tener la respuesta antes de negociar.</p></div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q4" aria-expanded="false" aria-controls="faq-4">Vivo fuera de España: ¿cómo funciona la venta?</button>
+            <div class="faq__a" id="faq-4" role="region" aria-labelledby="faq-q4"><p>Si eres no residente, el comprador retiene el 3 % del precio y lo ingresa en Hacienda con el modelo 211, a cuenta de tu impuesto por la ganancia. Si no puedes venir a la notaría, se puede firmar con un poder notarial. Lo planificamos con tiempo y con tu asesor fiscal.</p></div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q5" aria-expanded="false" aria-controls="faq-5">¿Qué papeles necesito para vender en Salou?</button>
+            <div class="faq__a" id="faq-5" role="region" aria-labelledby="faq-q5"><p>Cédula de habitabilidad, certificado de eficiencia energética, certificado de aptitud de la inspección técnica si el edificio está obligado, certificado de deudas con la comunidad, escritura y nota simple. En apartamentos que se usan poco es habitual que algún certificado esté caducado.</p></div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q6" aria-expanded="false" aria-controls="faq-6">¿Qué pasa si todavía no sé si quiero vender?</button>
+            <div class="faq__a" id="faq-6" role="region" aria-labelledby="faq-q6"><p>Perfecto: hago la valoración gratuita y el plan, y decides con perspectiva real. Sin presión y sin compromiso.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═════════ CIERRE ═════════ -->
+    <section class="sec sec--navy closing on-dark">
+      <div class="wrap">
+        <h2>Trato directo. Plan claro. Sin letra pequeña.</h2>
+        <p class="lead">Sin call centers y sin mareos. Con un método que funciona.</p>
+        <div class="actions">
+          <a href="#valoracion" class="btn btn--gold">Quiero mi valoración gratuita</a>
+        </div>
+        <p class="micro">Valoración gratuita · Respuesta en 24–48 h · Sin compromiso</p>
+        <p class="micro" style="margin-top:2rem">También vendo en:</p>
+        <ul class="zonas">
+          <li><a href="/">Tarragona</a></li>
+          <li><a href="/reus/">Reus</a></li>
+          <li><a href="/cambrils/">Cambrils</a></li>
+          <li><span aria-current="page">Salou</span></li>
+          <li><a href="/vila-seca/">Vila-seca</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═════════ CONTACTO ═════════ -->
+  <section class="contact" id="contacto" aria-label="Datos de contacto">
+    <div class="wrap">
+      <dl class="contact__grid">
+        <div><dt>Teléfono</dt><dd><a href="tel:+34640872514">+34 640 87 25 14</a></dd></div>
+        <div><dt>Correo electrónico</dt><dd><a href="mailto:vender@tucasapro.es">vender@tucasapro.es</a></dd></div>
+        <div><dt>Dirección</dt><dd>Vila-seca, Tarragona 43480</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ═════════ FOOTER ═════════ -->
+  <footer class="on-dark">
+    <div class="wrap">
+      <ul>
+        <li><a href="https://www.tucasapro.es/eu-politica-de-privacidad/">Política de privacidad</a></li>
+        <li><a href="https://www.tucasapro.es/es-politica-cookies">Política de cookies</a></li>
+        <li><a href="https://www.tucasapro.es/terminos-y-condiciones/">Términos y condiciones</a></li>
+        <li><button type="button" class="linkbtn" id="cookies-open">Configurar cookies</button></li>
+      </ul>
+      <p>© 2026 Sonia Guirao · TuCasaPro · eXp Realty</p>
+      <!-- ★ PENDIENTE: número de inscripción en el Registro de Agentes Inmobiliarios de Cataluña (AICAT), obligatorio en la publicidad. Ej.: <p>Agente inscrita en el Registro AICAT nº XXXX</p> -->
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a class="wa" href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20quiero%20una%20valoraci%C3%B3n%20de%20mi%20vivienda%20en%20Salou" target="_blank" rel="noopener" aria-label="Escribir a Sonia por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/></svg>
+  </a>
+
+  <!-- Aviso de cookies: Google Analytics solo se carga si la persona acepta -->
+  <div class="cookies on-dark" id="cookies" role="dialog" aria-label="Aviso de cookies" hidden>
+    <p>Usamos cookies analíticas (Google Analytics) para medir el uso de esta página. Puedes aceptarlas o rechazarlas, y cambiar tu decisión cuando quieras desde «Configurar cookies» al pie de la página. Más información en la <a href="https://www.tucasapro.es/es-politica-cookies">política de cookies</a>.</p>
+    <div class="cookies__btns">
+      <button type="button" class="btn btn--gold" id="cookies-yes">Aceptar</button>
+      <button type="button" class="btn btn--gold" id="cookies-no">Rechazar</button>
+    </div>
+  </div>
+
+  <script>
+    var MUNICIPIO_SLUG = 'salou';   /* ★ cambiar en cada landing */
+
+    /* FAQ */
+    (function () {
+      var items = document.querySelectorAll('.faq__item');
+      items.forEach(function (item) {
+        var btn = item.querySelector('.faq__q');
+        var panel = item.querySelector('.faq__a');
+        btn.addEventListener('click', function () {
+          var open = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(open));
+          panel.style.maxHeight = open ? panel.scrollHeight + 'px' : '0';
+        });
+      });
+      window.addEventListener('resize', function () {
+        items.forEach(function (item) {
+          if (item.classList.contains('open')) {
+            var panel = item.querySelector('.faq__a');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+
+    /* Cookies + GA4 (solo tras aceptar) */
+    (function () {
+      var GA_ID = 'G-NNNFZMSPQF';
+      var banner = document.getElementById('cookies');
+      var gaLoaded = false;
+
+      function loadGA() {
+        if (!GA_ID || gaLoaded) return;
+        gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', GA_ID, { content_group: MUNICIPIO_SLUG });
+      }
+      function clearGA() {
+        var host = location.hostname, parts = host.split('.');
+        var domains = ['', host, '.' + host, '.' + parts.slice(-2).join('.')];
+        document.cookie.split(';').forEach(function (c) {
+          var name = c.split('=')[0].trim();
+          if (/^_ga/.test(name)) {
+            domains.forEach(function (d) {
+              document.cookie = name + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : '');
+            });
+          }
+        });
+      }
+      function save(v) { try { localStorage.setItem('cookies-choice', v); } catch (e) {} }
+
+      var choice = null;
+      try { choice = localStorage.getItem('cookies-choice'); } catch (e) {}
+      if (choice === 'yes') { loadGA(); }
+      else if (!choice) { banner.hidden = false; }
+
+      document.getElementById('cookies-yes').addEventListener('click', function () {
+        save('yes'); banner.hidden = true; loadGA();
+      });
+      document.getElementById('cookies-no').addEventListener('click', function () {
+        save('no'); banner.hidden = true; clearGA();
+        if (gaLoaded) location.reload();   /* detiene GA si estaba cargado */
+      });
+      document.getElementById('cookies-open').addEventListener('click', function () {
+        banner.hidden = false;
+        document.getElementById('cookies-yes').focus();
+      });
+    })();
+
+    /* Formulario Web3Forms en 2 pasos */
+    (function () {
+      var form = document.getElementById('lead-form');
+      if (!form) return;
+      var step1 = document.getElementById('f-step-1');
+      var step2 = document.getElementById('f-step-2');
+      var res = document.getElementById('f-result');
+      var btn = document.getElementById('f-submit');
+      var FALLBACK = 'No se ha podido enviar. Inténtalo de nuevo o llama al 640 87 25 14.';
+
+      function track(name, params) { if (window.gtag) gtag('event', name, params || {}); }
+
+      /* UTM y página de origen (recortados, solo texto) */
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
+        var v = q.get(k);
+        if (v) form.elements[k].value = v.slice(0, 100);
+      });
+      form.elements['pagina'].value = (location.origin + location.pathname).slice(0, 200);
+
+      /* hCaptcha se carga solo al llegar al paso 2 (menos peso y menos terceros para quien no rellena) */
+      var captchaLoaded = false;
+      function loadCaptcha() {
+        if (captchaLoaded) return;
+        captchaLoaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://web3forms.com/client/script.js';
+        s.async = true;
+        document.body.appendChild(s);
+      }
+
+      function validGroup(container) {
+        var fields = container.querySelectorAll('input, select, textarea');
+        for (var i = 0; i < fields.length; i++) {
+          if (!fields[i].checkValidity()) { fields[i].reportValidity(); return false; }
+        }
+        return true;
+      }
+      function phoneOk() {
+        var tel = form.elements['telefono'];
+        var digits = tel.value.replace(/\D/g, '');
+        if (digits.length < 9 || digits.length > 15) {
+          tel.setCustomValidity('Introduce un teléfono válido, por ejemplo 600 123 456');
+        } else { tel.setCustomValidity(''); }
+        return tel.checkValidity();
+      }
+      form.elements['telefono'].addEventListener('input', function () { this.setCustomValidity(''); });
+
+      function goTo(n) {
+        step1.hidden = n !== 1;
+        step2.hidden = n !== 2;
+        res.className = 'f-msg'; res.textContent = '';
+        if (n === 2) loadCaptcha();
+        var first = (n === 1 ? step1 : step2).querySelector('select, input:not([type=hidden])');
+        if (first) first.focus({ preventScroll: true });
+        document.getElementById('valoracion').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      /* Planta y ascensor solo si es piso (desactivados no se validan ni se envían) */
+      var tipo = document.getElementById('f-tipo'), pisoRow = document.getElementById('f-piso');
+      function syncPiso() {
+        var esPiso = tipo.value !== 'Casa';
+        pisoRow.hidden = !esPiso;
+        pisoRow.querySelectorAll('select').forEach(function (el) { el.disabled = !esPiso; });
+      }
+      tipo.addEventListener('change', syncPiso); syncPiso();
+
+      step2.hidden = true;   /* sin JavaScript se ven los dos pasos y el formulario sigue funcionando */
+      var started = false;
+      form.addEventListener('focusin', function () {
+        if (!started) { started = true; track('form_start', { municipio: MUNICIPIO_SLUG }); }
+      });
+
+      document.getElementById('f-next').addEventListener('click', function () {
+        if (!validGroup(step1)) return;
+        track('form_step_1', { municipio: MUNICIPIO_SLUG });
+        goTo(2);
+      });
+      document.getElementById('f-back').addEventListener('click', function () { goTo(1); });
+
+      function show(cls, txt) { res.className = 'f-msg ' + cls; res.textContent = txt; res.focus(); }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!step1.hidden) {   /* Enter en el paso 1 = pasar al paso 2 */
+          if (validGroup(step1)) { track('form_step_1', { municipio: MUNICIPIO_SLUG }); goTo(2); }
+          return;
+        }
+        phoneOk();
+        if (!validGroup(step2)) return;
+        var cap = form.querySelector('textarea[name=h-captcha-response]');
+        if (!cap || !cap.value) { show('err', 'Marca la casilla «Soy humano» de la verificación antes de enviar.'); return; }
+
+        var data = {};
+        new FormData(form).forEach(function (v, k) { data[k] = typeof v === 'string' ? v.trim() : v; });
+        btn.disabled = true; var label = btn.textContent; btn.textContent = 'Enviando…';
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function (r) {
+            return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false }; });
+          })
+          .then(function (o) {
+            if (o.ok) {
+              form.hidden = true;
+              res.className = 'f-msg ok';
+              res.innerHTML = '<strong>¡Recibido!</strong> Te contactaré en 24–48 h con tu valoración. ¿Tienes prisa? <a href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20acabo%20de%20pedir%20mi%20valoraci%C3%B3n%20en%20Salou" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>.';
+              res.focus();
+              track('generate_lead', { municipio: MUNICIPIO_SLUG });
+            } else {
+              show('err', FALLBACK);
+              if (window.hcaptcha) { try { hcaptcha.reset(); } catch (err) {} }
+            }
+          })
+          .catch(function () { show('err', 'Error de conexión. ' + FALLBACK); })
+          .then(function () { btn.disabled = false; btn.textContent = label; });
+      });
+    })();
+  </script>
+
+</body>
+</html>
