@@ -1,43 +1,113 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
+  <!--
+  ═══════════════════════════════════════════════════════════════
+  PLANTILLA DE LANDING · TuCasaPro (Sonia Guirao)
+  Para replicar en otro municipio cambia SOLO lo marcado con ★:
+   ★ <title>, meta description, canonical, og:url, og:title
+   ★ JSON-LD: "url" y textos del FAQ (deben coincidir con el FAQ visible)
+   ★ H1, textos con el nombre del municipio y zonas del desplegable
+   ★ Campos ocultos: subject y municipio
+   ★ MUNICIPIO_SLUG en el script final (Analytics)
+   ★ Mensaje de WhatsApp (?text=...)
+  Rutas de imágenes y fuentes siempre absolutas: /img/... y /fonts/...
+  ═══════════════════════════════════════════════════════════════
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0B0B26">
-  <title>Vender piso en Tarragona (2026) | Valoración + Plan de Venta | TuCasaPro</title>
-  <meta name="description" content="¿Vender en Tarragona? Te damos valoración y plan de venta en 1 página: precio defendible, papeles listos y filtros para cerrar sin bloqueos. Respuesta 24–48h.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Vender piso en Reus | Valoración gratuita y plan de venta</title>
+  <meta name="description" content="¿Vendes piso o casa en Reus? Valoración gratuita y plan de venta en 1 página, con los papeles y costes del vendedor explicados. Trato directo con Sonia. Respuesta en 24–48 h.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://vender.tucasapro.es/">
+  <link rel="canonical" href="https://vender.tucasapro.es/reus/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Vender piso en Tarragona (2026) | TuCasaPro">
-  <meta property="og:description" content="Valoración + plan de venta en 1 página. Precio defendible, papeles listos, cierre sin bloqueos.">
+  <meta property="og:site_name" content="TuCasaPro · Sonia Guirao">
+  <meta property="og:title" content="Vender piso en Reus | Valoración gratuita y plan de venta">
+  <meta property="og:description" content="Valoración gratuita + plan de venta en 1 página para vender en Reus: precio defendible, papeles listos y costes claros.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vender.tucasapro.es/">
+  <meta property="og:url" content="https://vender.tucasapro.es/reus/">
   <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://www.tucasapro.es/images/user-seo/user-seo-252146.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Schema: RealEstateAgent -->
+  <!-- Imagen principal: se pide con prioridad para mejorar el LCP (Core Web Vitals) -->
+  <link rel="preload" as="image" href="/img/hero-reus.jpg" fetchpriority="high">
+
+  <!-- Schema: entidades (página, servicio, agente, persona). ★ Cambiar url, nombre de ciudad y fechas en cada landing -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["RealEstateAgent", "LocalBusiness"],
-    "name": "Sonia Guirao — TuCasaPro",
-    "url": "https://vender.tucasapro.es/",
-    "telephone": "+34640872514",
-    "email": "info@soniaguiraoinmobiliaria.com",
-    "image": "https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vila-seca",
-      "postalCode": "43480",
-      "addressRegion": "Tarragona",
-      "addressCountry": "ES"
-    },
-    "areaServed": ["Tarragona","Reus","Vila-seca","La Pineda","Salou","Cambrils"],
-    "description": "Asesora inmobiliaria especializada en la venta de pisos y casas en Tarragona y alrededores. Valoración, plan de venta y gestión documental completa.",
-    "sameAs": ["https://www.tucasapro.es/"],
-    "memberOf": { "@type": "Organization", "name": "eXp Realty" }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://vender.tucasapro.es/reus/#webpage",
+        "url": "https://vender.tucasapro.es/reus/",
+        "name": "Vender piso en Reus | Valoración gratuita y plan de venta",
+        "inLanguage": "es-ES",
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-15",
+        "about": { "@id": "https://vender.tucasapro.es/reus/#servicio" },
+        "author": { "@id": "https://vender.tucasapro.es/#sonia" },
+        "publisher": { "@id": "https://vender.tucasapro.es/#agente" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "TuCasaPro", "item": "https://www.tucasapro.es/" },
+            { "@type": "ListItem", "position": 2, "name": "Vender en Reus", "item": "https://vender.tucasapro.es/reus/" }
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://vender.tucasapro.es/reus/#servicio",
+        "name": "Valoración y plan de venta de viviendas en Reus",
+        "serviceType": "Valoración inmobiliaria y venta de pisos y casas",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Valoración gratuita y sin compromiso" },
+        "provider": { "@id": "https://vender.tucasapro.es/#agente" },
+        "areaServed": { "@type": "City", "name": "Reus", "containedInPlace": { "@type": "AdministrativeArea", "name": "Baix Camp, Tarragona" } }
+      },
+      {
+        "@type": ["RealEstateAgent", "LocalBusiness"],
+        "@id": "https://vender.tucasapro.es/#agente",
+        "name": "Sonia Guirao — TuCasaPro",
+        "url": "https://www.tucasapro.es/",
+        "telephone": "+34640872514",
+        "email": "vender@tucasapro.es",
+        "image": "https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp",
+        "logo": "https://www.tucasapro.es/images/opt/user-logo/logo-6696.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vila-seca",
+          "postalCode": "43480",
+          "addressRegion": "Tarragona",
+          "addressCountry": "ES"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Tarragona" },
+          { "@type": "City", "name": "Reus" },
+          { "@type": "City", "name": "Vila-seca" },
+          { "@type": "Place", "name": "La Pineda" },
+          { "@type": "City", "name": "Salou" },
+          { "@type": "City", "name": "Cambrils" }
+        ],
+        "founder": { "@id": "https://vender.tucasapro.es/#sonia" },
+        "memberOf": { "@type": "Organization", "name": "eXp Realty" },
+        "sameAs": ["https://www.tucasapro.es/"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://vender.tucasapro.es/#sonia",
+        "name": "Sonia Guirao",
+        "jobTitle": "Asesora inmobiliaria",
+        "image": "https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp",
+        "worksFor": { "@type": "Organization", "name": "eXp Realty" },
+        "url": "https://www.tucasapro.es/",
+        "sameAs": ["https://www.tucasapro.es/"]
+      }
+    ]
   }
   </script>
 
@@ -47,21 +117,25 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"¿Cuánto vale mi piso en Tarragona?","acceptedAnswer":{"@type":"Answer","text":"Depende de la zona, el estado y la demanda real del momento. Te damos un rango defendible y el porqué, basado en cierres reales en tu barrio, no en portales con datos desfasados."}},
-      {"@type":"Question","name":"¿Qué documentación necesito para vender?","acceptedAnswer":{"@type":"Answer","text":"Nota simple, certificado energético, cédula de habitabilidad, escrituras... Lo ordenamos todo con un checklist antes de publicar para evitar cualquier retraso legal."}},
-      {"@type":"Question","name":"¿Puedo vender si tengo hipoteca o herencia?","acceptedAnswer":{"@type":"Answer","text":"Sí. En la mayoría de casos se puede gestionar sin problema. La clave es planificarlo bien desde el inicio para que la operación no se bloquee a mitad del proceso."}},
-      {"@type":"Question","name":"¿Cuánto se tarda en vender?","acceptedAnswer":{"@type":"Answer","text":"Sin promesas de plazos imposibles. Con precio y papeles bien desde el primer día, se reduce la fricción y las visitas inútiles."}},
-      {"@type":"Question","name":"¿Qué pasa si todavía no sé si quiero vender?","acceptedAnswer":{"@type":"Answer","text":"Perfecto: hacemos la valoración y el plan, y decides con perspectiva real. Sin presión y sin compromiso."}}
+      {"@type": "Question", "name": "¿Cuánto vale mi piso en Reus?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de la zona, la planta, si tiene ascensor, balcón o terraza, el estado y la demanda real del momento. Te doy un rango defendible y el porqué, basado en operaciones reales de tu zona de Reus, no en portales con datos desfasados."}},
+      {"@type": "Question", "name": "¿Qué papeles necesito para vender un piso de segunda mano en Reus?", "acceptedAnswer": {"@type": "Answer", "text": "En Cataluña se entrega la cédula de habitabilidad, el certificado de eficiencia energética, el certificado de aptitud de la inspección técnica del edificio si el edificio está obligado a pasarla, el certificado de deudas con la comunidad y, si hay hipoteca, su documentación. Lo reviso todo con un checklist antes de publicar."}},
+      {"@type": "Question", "name": "¿Quién paga la plusvalía municipal al vender en Reus?", "acceptedAnswer": {"@type": "Answer", "text": "En una compraventa la paga el vendedor y se gestiona ante el Ajuntament de Reus. Si no ha habido ganancia entre el precio de compra y el de venta del suelo, no se paga, y puedes pedir que se calcule sobre la ganancia real si te sale menos que con el método objetivo."}},
+      {"@type": "Question", "name": "¿Tengo que pagar IRPF por vender mi vivienda?", "acceptedAnswer": {"@type": "Answer", "text": "La ganancia que obtengas tributa en el IRPF. Si es tu vivienda habitual puede quedar exenta en algunos casos, por ejemplo si reinviertes en otra vivienda habitual o si tienes más de 65 años. Conviene confirmarlo con tu asesor fiscal antes de fijar el precio."}},
+      {"@type": "Question", "name": "¿Puedo vender si tengo hipoteca o herencia?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. En la mayoría de casos se puede gestionar sin problema: la hipoteca se cancela con la venta y la herencia debe estar aceptada (y normalmente inscrita a nombre de los herederos) antes de firmar. La clave es planificarlo desde el inicio para que la operación no se bloquee."}},
+      {"@type": "Question", "name": "¿Qué pasa si todavía no sé si quiero vender?", "acceptedAnswer": {"@type": "Answer", "text": "Perfecto: hago la valoración gratuita y el plan, y decides con perspectiva real. Sin presión y sin compromiso."}}
     ]
   }
   </script>
 
-  <!-- Roboto, la tipografía de la web actual de Sonia -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+  <!-- Roboto alojada en el propio dominio (sin enviar la IP del visitante a Google).
+       Sube los 4 archivos .woff2 a la carpeta /fonts/ del repositorio. -->
+  <link rel="preload" href="/fonts/roboto-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 300; font-display: swap; src: url('/fonts/roboto-latin-300-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/roboto-latin-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/roboto-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/roboto-latin-700-normal.woff2') format('woff2'); }
+
     /* ═════════ TOKENS ═════════
        Colores aproximados a partir de capturas de tucasapro.es.
        Compruébalos con el cuentagotas de Chrome y ajusta aquí si hace falta. */
@@ -77,6 +151,7 @@
       --white:    #FFFFFF;
       --font:     'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
       --py:       clamp(3rem, 7vw, 5.5rem);
+      --header-h: 72px;
     }
 
     /* ═════════ RESET ═════════ */
@@ -96,6 +171,10 @@
     [hidden] { display: none !important; }
     :focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
     .on-dark :focus-visible { outline-color: var(--white); }
+    [id] { scroll-margin-top: calc(var(--header-h) + 8px); }
+    .skip { position: absolute; left: 1rem; top: -100px; z-index: 300; background: var(--navy); color: var(--white); padding: .6rem 1rem; }
+    .skip:focus { top: 1rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
     /* ═════════ LAYOUT: contenedor al 90% ═════════ */
     .wrap        { width: min(90%, 1100px); margin-inline: auto; }
@@ -134,6 +213,8 @@
     .btn--navy:hover { background: var(--navy-2); }
     .btn--line { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
     .btn--line:hover { background: rgba(255,255,255,.12); }
+    .btn--ghost { background: transparent; color: var(--navy); border-color: var(--line); }
+    .btn--ghost:hover { border-color: var(--navy); }
 
     .actions { display: flex; flex-direction: column; gap: .75rem; }
     @media (min-width: 520px) {
@@ -141,29 +222,22 @@
       .actions { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     }
 
-    /* ═════════ CABECERA (logo + menú) ═════════ */
-    .topbar { background: var(--white); border-bottom: 1px solid var(--line); }
+    /* ═════════ CABECERA FIJA (logo + CTA) ═════════ */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white); border-bottom: 1px solid var(--line);
+    }
     .topbar__in {
       display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem; padding: .6rem 0;
+      gap: 1rem; padding: .5rem 0; min-height: var(--header-h);
     }
     .brand img {
-      height: clamp(44px, 9vw, 76px);
-      width: auto; max-width: 62vw; object-fit: contain;
+      height: clamp(44px, 8vw, 60px);
+      width: auto; max-width: 58vw; object-fit: contain;
     }
-    .mainnav { display: none; gap: 2rem; }
-    .mainnav a {
-      font-weight: 300; font-size: .9rem; letter-spacing: .05em; text-transform: uppercase;
-      padding: .4rem 0; border-bottom: 1px solid transparent;
-    }
-    .mainnav a:hover { border-color: var(--gold); }
-    .topbar__cta { width: auto; display: inline-block; padding: .65em 1.1em; font-size: .74rem; }
-    @media (min-width: 800px) {
-      .mainnav { display: flex; }
-      .topbar__cta { display: none; }
-    }
+    .topbar__cta { width: auto; display: inline-block; padding: .7em 1.1em; font-size: .74rem; flex: none; }
 
-    /* Barra dorada */
+    /* Barra dorada: navegación interna (no saca al visitante de la landing) */
     .goldbar { background: var(--gold); }
     .goldbar ul {
       list-style: none; display: flex; flex-wrap: wrap;
@@ -177,22 +251,22 @@
     .goldbar a:hover { border-color: var(--navy); }
 
     /* ═════════ HERO ═════════
-       Foto: sube img/hero-tarragona.jpg (1920×1080, <300 KB).
+       Foto: sube /img/hero-reus.jpg (1920×1080, <300 KB).
        Sin foto se ve el azul oscuro. */
     .hero {
       color: var(--white);
       display: flex; align-items: center;
-      min-height: clamp(460px, 78vh, 720px);
+      min-height: clamp(460px, 74vh, 700px);
       padding: var(--py) 0;
       background:
         linear-gradient(rgba(11,11,38,.62), rgba(11,11,38,.74)),
-        url('/img/hero-tarragona.jpg') center / cover no-repeat,
+        url('/img/hero-reus.jpg') center / cover no-repeat,
         var(--navy);
       text-align: center;
     }
     .hero h1 { max-width: 22ch; margin: 0 auto 1.1rem; }
     .hero .lead { max-width: 52ch; margin: 0 auto 2rem; color: rgba(255,255,255,.88); }
-    .hero .micro { margin-top: 1.1rem; color: rgba(255,255,255,.7); opacity: 1; }
+    .hero .micro { margin-top: 1.1rem; color: rgba(255,255,255,.75); opacity: 1; }
 
     /* Franja de mercado */
     .band { background: var(--sand); padding: clamp(2rem, 5vw, 3.25rem) 0; }
@@ -227,23 +301,29 @@
     .pillar h3 { margin-bottom: .5rem; }
     .pillar p { font-size: .95rem; color: var(--muted); }
 
-    /* ═════════ FORMULARIO ═════════ */
+    /* ═════════ FORMULARIO (2 pasos) ═════════ */
     .sec--gold h2 { color: var(--navy); }
     .formbox {
       background: var(--white);
       max-width: 720px; margin: 1.75rem auto 0;
       padding: clamp(1.25rem, 4vw, 2.5rem);
     }
-    .formbox .lead { margin-bottom: 1.5rem; color: var(--muted); font-size: clamp(.95rem, 2.2vw, 1.05rem); }
+    .formbox .lead { margin-bottom: 1.25rem; color: var(--muted); font-size: clamp(.95rem, 2.2vw, 1.05rem); }
     .formbox form { display: grid; gap: 1rem; }
+    .f-step { border: 0; display: grid; gap: 1rem; min-width: 0; }
+    .f-step__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); }
+    .f-step__title { font-size: 1.05rem; font-weight: 500; color: var(--navy); }
+    .f-step__count { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-ink); white-space: nowrap; }
+    .f-nav { display: flex; flex-direction: column-reverse; gap: .75rem; }
+    @media (min-width: 520px) { .f-nav { flex-direction: row; justify-content: space-between; align-items: center; } }
     .f-row { display: grid; gap: 1rem; grid-template-columns: 1fr; }
     @media (min-width: 600px) { .f-row--2 { grid-template-columns: 1fr 1fr; } }
     .f-field { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
-    .f-field label, .f-field legend { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); font-weight: 500; }
+    .f-field label { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); font-weight: 500; }
     .f-field .opt { color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 300; }
     .f-field input, .f-field select, .f-field textarea {
       width: 100%; font: inherit; font-size: 1rem; font-weight: 300; color: var(--ink);
-      background: var(--white); border: 1px solid var(--line); border-radius: 0;
+      background: var(--white); border: 1px solid #C9C1AE; border-radius: 0;
       padding: .8rem .9rem; min-height: 48px; appearance: none; -webkit-appearance: none;
     }
     .f-field select {
@@ -252,17 +332,42 @@
       background-size: 5px 5px; background-repeat: no-repeat; padding-right: 2.5rem;
     }
     .f-field textarea { min-height: 96px; resize: vertical; }
-    .f-field input:focus, .f-field select:focus, .f-field textarea:focus { outline: 2px solid var(--gold); outline-offset: 0; border-color: var(--gold); }
-    .f-check { display: flex; gap: .7rem; align-items: flex-start; font-size: .85rem; color: var(--muted); line-height: 1.5; }
-    .f-check input { width: 20px; height: 20px; min-height: 0; margin-top: .15rem; flex: none; accent-color: var(--navy); }
+    .f-field input:focus, .f-field select:focus, .f-field textarea:focus { outline: 2px solid var(--navy); outline-offset: 0; border-color: var(--navy); }
+    .f-check { display: flex; gap: .7rem; align-items: flex-start; font-size: .85rem; color: var(--muted); line-height: 1.5; cursor: pointer; }
+    .f-check input { width: 20px; height: 20px; margin-top: .15rem; flex: none; accent-color: var(--navy); }
     .f-check a { color: var(--gold-ink); text-decoration: underline; }
     .f-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+    .f-trust { font-size: .8rem; color: var(--muted); text-align: center; }
     .f-msg { padding: .9rem 1rem; font-size: .92rem; display: none; }
     .f-msg.ok { display: block; background: var(--sand); border-left: 4px solid var(--gold); color: var(--navy); }
+    .f-msg.ok a { text-decoration: underline; color: var(--gold-ink); }
     .f-msg.err { display: block; background: #FBEAEA; border-left: 4px solid #B3261E; color: #7A1A14; }
     .formbox .btn[disabled] { opacity: .6; cursor: wait; }
-    .formbox .micro { margin-top: 1rem; }
-    .formbox .micro a { text-decoration: underline; color: var(--gold-ink); }
+    .rgpd { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .74rem; line-height: 1.55; color: var(--muted); }
+    .rgpd strong { color: var(--ink); font-weight: 500; }
+    .rgpd a { text-decoration: underline; color: var(--gold-ink); }
+
+    /* ═════════ PAPELES Y COSTES (contenido local) ═════════ */
+    .docs { display: grid; gap: 1.5rem; margin-top: 2rem; }
+    @media (min-width: 860px) { .docs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; } }
+    .docs__card { background: var(--white); border-top: 3px solid var(--gold); padding: 1.5rem 1.25rem; }
+    .docs__card h3 { margin-bottom: 1rem; }
+    .docs__list { list-style: none; display: grid; gap: .85rem; }
+    .docs__list li { padding-left: 1.4rem; position: relative; font-size: .95rem; }
+    .docs__list li::before { content: ''; position: absolute; left: 0; top: .6em; width: .5rem; height: .5rem; background: var(--gold); }
+    .docs__list strong { font-weight: 500; display: block; }
+    .docs__list span { color: var(--muted); }
+    .docs__note { margin-top: 1.5rem; font-size: .82rem; color: var(--muted); }
+    .docs__note summary { cursor: pointer; display: inline; text-decoration: underline; color: var(--gold-ink); }
+    .docs__note details[open] summary { margin-right: .4rem; }
+    .docs__note p { margin-top: .5rem; }
+    .docs__note a { color: var(--gold-ink); text-decoration: underline; }
+
+    /* ═════════ ZONAS (enlaces internos) ═════════ */
+    .zonas { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-top: 1.25rem; }
+    .zonas a, .zonas span { display: inline-block; padding: .5rem 1rem; border: 1px solid var(--line); font-size: .9rem; }
+    .zonas a:hover { border-color: var(--navy); }
+    .zonas [aria-current] { background: var(--navy); color: var(--white); border-color: var(--navy); }
 
     /* ═════════ PROCESO ═════════ */
     .steps { counter-reset: step; list-style: none; margin-top: 2rem; display: grid; gap: .75rem; }
@@ -301,7 +406,7 @@
     .closing { text-align: center; }
     .closing h2 { max-width: 20ch; margin: 0 auto 1rem; }
     .closing .lead { max-width: 46ch; margin: 0 auto 2rem; color: rgba(255,255,255,.8); }
-    .closing .micro { margin-top: 1rem; color: rgba(255,255,255,.6); opacity: 1; }
+    .closing .micro { margin-top: 1rem; color: rgba(255,255,255,.7); opacity: 1; }
 
     /* ═════════ CONTACTO (franja dorada) ═════════ */
     .contact { background: var(--gold); color: var(--navy); padding: clamp(2.25rem, 5vw, 3.5rem) 0; }
@@ -314,10 +419,11 @@
     .contact a:hover { text-decoration: underline; }
 
     /* ═════════ FOOTER ═════════ */
-    footer { background: var(--navy); color: rgba(255,255,255,.6); font-size: .8rem; padding: 1.5rem 0; text-align: center; }
+    footer { background: var(--navy); color: rgba(255,255,255,.65); font-size: .8rem; padding: 1.5rem 0 5rem; text-align: center; }
     footer ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.25rem; margin-bottom: .6rem; }
-    footer a { color: rgba(255,255,255,.8); text-decoration: underline; }
-    footer a:hover { color: var(--gold); }
+    footer a, .linkbtn { color: rgba(255,255,255,.85); text-decoration: underline; }
+    .linkbtn { background: none; border: 0; font: inherit; cursor: pointer; padding: 0; }
+    footer a:hover, .linkbtn:hover { color: var(--gold); }
 
     /* ═════════ WHATSAPP FLOTANTE ═════════ */
     .wa {
@@ -343,12 +449,12 @@
     @media (min-width: 720px) {
       .cookies { flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; }
       .cookies__btns { flex: 0 0 auto; }
-      .cookies__btns .btn { flex: 0 0 auto; }
+      .cookies__btns .btn { flex: 0 0 auto; min-width: 8.5rem; }
     }
 
     /* ═════════ MOVIMIENTO ═════════ */
     .hero .wrap { animation: rise .6s ease both; }
-    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @keyframes rise { from { transform: translateY(12px); } to { transform: none; } }   /* sin opacidad: no retrasa el LCP */
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
@@ -357,30 +463,27 @@
 
 <body>
 
+  <a href="#valoracion" class="skip">Ir al formulario de valoración</a>
+
   <!-- ═════════ CABECERA ═════════ -->
   <header class="topbar">
     <div class="wrap topbar__in">
       <a class="brand" href="https://www.tucasapro.es/">
         <img src="https://www.tucasapro.es/images/opt/user-logo/logo-6696.png?mtime=1769278746" alt="TuCasa Pro, asesoría inmobiliaria · eXp Realty">
       </a>
-      <nav class="mainnav" aria-label="Menú principal">
-        <a href="https://www.tucasapro.es/">Inicio</a>
-        <a href="https://www.tucasapro.es/propiedades/">Propiedades</a>
-        <a href="https://www.tucasapro.es/vendedores/">Blog</a>
-        <a href="https://www.tucasapro.es/#contactme">Contacto</a>
-      </nav>
       <a href="#valoracion" class="btn btn--navy topbar__cta">Pedir valoración</a>
     </div>
   </header>
 
-  <nav class="goldbar" aria-label="Accesos rápidos">
+  <nav class="goldbar" aria-label="Secciones de la página">
     <div class="wrap">
       <ul>
-        <li><a href="https://www.tucasapro.es/opportunities">Comprar</a></li>
-        <li><a href="https://www.tucasapro.es/opportunities_rent">Alquilar</a></li>
-        <li><a href="https://www.tucasapro.es/valora-tu-casa">Vender</a></li>
-        <li><a href="https://www.tucasapro.es/1/unete-a-exp">Únete a eXp</a></li>
-        <li><a href="https://www.tucasapro.es/ecard">E-Card</a></li>
+        <li><a href="#sonia">Sobre mí</a></li>
+        <li><a href="#valoracion">Valoración</a></li>
+        <li><a href="#papeles">Papeles y costes</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </nav>
@@ -390,24 +493,24 @@
     <!-- ═════════ HERO ═════════ -->
     <section class="hero on-dark">
       <div class="wrap">
-        <h1>Vende tu piso en Tarragona sin perder dinero por un mal precio.</h1>
-        <p class="lead">Precio defendible, documentación ordenada y una estrategia para atraer al comprador correcto.</p>
+        <h1>Vende tu piso en Reus con un precio defendible y sin bloqueos en notaría.</h1>
+        <p class="lead">Valoración por zona, papeles revisados desde el primer día y una estrategia para negociar con control, no a la baja.</p>
         <div class="actions">
-          <a href="#valoracion" class="btn btn--gold">Quiero mi valoración + plan de venta</a>
-          <a href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20quiero%20una%20valoraci%C3%B3n%20de%20mi%20vivienda%20en%20Tarragona" class="btn btn--line">Hablemos 10 min</a>
+          <a href="#valoracion" class="btn btn--gold">Quiero mi valoración gratuita</a>
+          <a href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20quiero%20una%20valoraci%C3%B3n%20de%20mi%20vivienda%20en%20Reus" class="btn btn--line" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
         </div>
-        <p class="micro">Respuesta en 24–48 h · Sin compromiso · Sin presión</p>
+        <p class="micro">Gratis y sin compromiso · Respuesta en 24–48 h · Trato directo con Sonia</p>
       </div>
     </section>
 
     <div class="band">
       <div class="wrap">
-        <p><strong>En Tarragona no falla la demanda.</strong> Falla salir con precio inflado, papeles a medias y visitas sin intención. Aquí lo hacemos simple: orden, estrategia y cierre.</p>
+        <p><strong>En Reus no falla publicar.</strong> Falla salir con precio inflado, papeles a medias y negociar sin control. Conmigo se trabaja con método: orden, estrategia y cierre.</p>
       </div>
     </div>
 
     <!-- ═════════ SONIA ═════════ -->
-    <section class="sec">
+    <section class="sec" id="sonia">
       <div class="wrap sonia">
         <img class="sonia__photo"
              src="https://www.tucasapro.es/images/opt/user-photo/Sonia-Guirao-Perez-6696.webp?t=150014"
@@ -432,11 +535,11 @@
         <div class="grid3">
           <article class="pillar">
             <h3>Precio con cabeza</h3>
-            <p>Rango real por barrio o microzona de Tarragona. No promedios genéricos que no defienden nada en la negociación.</p>
+            <p>Rango real por zona de Reus, teniendo en cuenta planta, ascensor, exterior y estado. No promedios genéricos que no defienden nada en la negociación.</p>
           </article>
           <article class="pillar">
             <h3>Venta sin bloqueos</h3>
-            <p>Checklist documental desde el día 1 para llegar a notaría sin sorpresas de última hora.</p>
+            <p>Checklist documental desde el día 1 para que la operación no se caiga en notaría por un papel pendiente.</p>
           </article>
           <article class="pillar">
             <h3>Visitas con intención</h3>
@@ -449,115 +552,183 @@
     <!-- ═════════ FORMULARIO ═════════ -->
     <section id="valoracion" class="sec sec--gold">
       <div class="wrap">
-        <h2 class="center">Valoración + Plan de Venta en 1 página</h2>
+        <h2 class="center">Valoración gratuita + Plan de Venta en 1 página</h2>
         <div class="formbox">
-          <p class="lead">Te digo cuánto puedes pedir, qué documentación te falta y qué pasos exactos debes dar para vender con seguridad en Tarragona.</p>
+          <p class="lead">Te digo cuánto puedes pedir, qué documentación te falta (si falta algo) y qué pasos tocan para vender en Reus sin fricción.</p>
 
           <form id="lead-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-            <!-- CLAVE de Web3Forms: clave de Web3Forms (se recibe por email al registrarse en web3forms.com con el email de Sonia) -->
+            <!-- Clave pública de Web3Forms (solo permite enviar, no leer) -->
             <input type="hidden" name="access_key" value="51fa0819-973a-4dfc-8243-e683beb37d94">
-            <input type="hidden" name="subject" value="Nueva valoración — Tarragona">
+            <input type="hidden" name="subject" value="Nueva valoración — Reus">
             <input type="hidden" name="from_name" value="Landing vender.tucasapro.es">
-            <input type="hidden" name="municipio" value="Tarragona">
+            <input type="hidden" name="municipio" value="Reus">
             <input type="hidden" name="utm_source" value="">
             <input type="hidden" name="utm_medium" value="">
             <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_term" value="">
+            <input type="hidden" name="utm_content" value="">
             <input type="hidden" name="pagina" value="">
             <input type="checkbox" name="botcheck" class="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-            <div class="f-row f-row--2">
-              <div class="f-field"><label for="f-nombre">Nombre</label>
-                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
-              <div class="f-field"><label for="f-tel">Teléfono</label>
-                <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></div>
-            </div>
-            <div class="f-field"><label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required></div>
-
-            <div class="f-row f-row--2">
-              <div class="f-field"><label for="f-zona">Zona de Tarragona</label>
-                <select id="f-zona" name="zona" required>
-                  <option value="">Selecciona…</option>
-                  <option>Eixample</option><option>Part Alta</option>
-                  <option>Sant Pere i Sant Pau</option><option>Bonavista</option><option>Otros</option>
+            <!-- PASO 1: la vivienda (primero lo fácil, sin datos personales) -->
+            <fieldset class="f-step" id="f-step-1">
+              <legend class="sr-only">Paso 1 de 2: tu vivienda</legend>
+              <div class="f-step__head" aria-hidden="true"><span class="f-step__title">Tu vivienda</span><span class="f-step__count">Paso 1 de 2</span></div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-zona">Zona de Reus</label>
+                  <select id="f-zona" name="zona" required>
+                    <option value="">Selecciona…</option>
+                    <option>Centre</option><option>Llevant</option><option>Ponent</option>
+                    <option>Sud</option><option>Nord</option><option>Otra zona</option>
+                  </select></div>
+                <div class="f-field"><label for="f-calle">Calle <span class="opt">(sin número, opcional)</span></label>
+                  <input id="f-calle" name="calle" type="text" maxlength="80" autocomplete="off" placeholder="Ej. Carrer de Llovera"></div>
+              </div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-tipo">Tipo de inmueble</label>
+                  <select id="f-tipo" name="tipo" required>
+                    <option value="">Selecciona…</option><option>Piso</option><option>Casa</option>
+                  </select></div>
+                <div class="f-field"><label for="f-estado">Estado</label>
+                  <select id="f-estado" name="estado" required>
+                    <option value="">Selecciona…</option><option>Reformado</option><option>Semirreformado</option><option>De origen</option>
+                  </select></div>
+              </div>
+              <div class="f-row f-row--2" id="f-piso">
+                <div class="f-field"><label for="f-planta">Planta</label>
+                  <select id="f-planta" name="planta" required>
+                    <option value="">Selecciona…</option><option>Bajos</option><option>1.ª</option><option>2.ª</option><option>3.ª</option><option>4.ª</option><option>5.ª o superior</option><option>Ático</option>
+                  </select></div>
+                <div class="f-field"><label for="f-ascensor">¿Tiene ascensor?</label>
+                  <select id="f-ascensor" name="ascensor" required>
+                    <option value="">Selecciona…</option><option>Sí</option><option>No</option>
+                  </select></div>
+              </div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-m2">Metros cuadrados</label>
+                  <input id="f-m2" name="m2" type="number" min="10" max="5000" step="1" inputmode="numeric" placeholder="Ej. 85" required></div>
+                <div class="f-field"><label for="f-hab">Habitaciones</label>
+                  <input id="f-hab" name="habitaciones" type="number" min="0" max="30" step="1" inputmode="numeric" placeholder="Ej. 3" required></div>
+              </div>
+              <div class="f-field"><label for="f-ext">Exterior</label>
+                <select id="f-ext" name="exterior" required>
+                  <option value="">Selecciona…</option><option>Balcón</option><option>Terraza</option><option>Balcón y terraza</option><option>Ninguno</option>
                 </select></div>
-              <div class="f-field"><label for="f-tipo">Tipo de inmueble</label>
-                <select id="f-tipo" name="tipo" required>
-                  <option value="">Selecciona…</option><option>Piso</option><option>Casa</option>
-                </select></div>
-            </div>
-            <div class="f-row f-row--2">
-              <div class="f-field"><label for="f-m2">Metros cuadrados</label>
-                <input id="f-m2" name="m2" type="number" min="1" inputmode="numeric" required></div>
-              <div class="f-field"><label for="f-hab">Habitaciones</label>
-                <input id="f-hab" name="habitaciones" type="number" min="0" inputmode="numeric" required></div>
-            </div>
-            <div class="f-field"><label for="f-estado">Estado</label>
-              <select id="f-estado" name="estado" required>
-                <option value="">Selecciona…</option><option>Actualizado</option><option>Para reformar</option>
-              </select></div>
-            <div class="f-field"><label for="f-hip">¿Hay hipoteca o herencia? <span class="opt">(opcional)</span></label>
-              <select id="f-hip" name="hipoteca_herencia">
-                <option value="">Prefiero comentarlo luego</option><option>Hipoteca</option><option>Herencia</option><option>Ninguna</option>
-              </select></div>
-            <div class="f-field"><label for="f-msg">Algo más que quieras contarme <span class="opt">(opcional)</span></label>
-              <textarea id="f-msg" name="mensaje"></textarea></div>
+              <button type="button" class="btn btn--navy" id="f-next">Siguiente: dónde te envío la valoración</button>
+            </fieldset>
 
-            <label class="f-check">
-              <input type="checkbox" name="consentimiento" value="Acepta" required>
-              <span>Soy mayor de 16 años y he leído y acepto la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>.</span>
-            </label>
+            <!-- PASO 2: datos de contacto -->
+            <fieldset class="f-step" id="f-step-2">
+              <legend class="sr-only">Paso 2 de 2: tus datos de contacto</legend>
+              <div class="f-step__head" aria-hidden="true"><span class="f-step__title">¿Dónde te envío la valoración?</span><span class="f-step__count">Paso 2 de 2</span></div>
+              <div class="f-row f-row--2">
+                <div class="f-field"><label for="f-nombre">Nombre</label>
+                  <input id="f-nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required></div>
+                <div class="f-field"><label for="f-tel">Teléfono</label>
+                  <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" pattern="[0-9\+ \(\)\-]{9,20}" placeholder="600 123 456" title="Introduce un teléfono válido, por ejemplo 600 123 456" required></div>
+              </div>
+              <div class="f-field"><label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+              <div class="f-field"><label for="f-msg">Algo más que quieras contarme <span class="opt">(opcional: hipoteca, herencia, plazos…)</span></label>
+                <textarea id="f-msg" name="mensaje" maxlength="1500"></textarea></div>
 
-            <div class="h-captcha" data-captcha="true"></div>
+              <label class="f-check">
+                <input type="checkbox" name="consentimiento" value="Acepta" required>
+                <span>Soy mayor de 16 años y he leído y acepto la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>.</span>
+              </label>
 
-            <button type="submit" class="btn btn--navy" id="f-submit">Quiero mi valoración</button>
-            <div id="f-result" class="f-msg" role="status" aria-live="polite"></div>
+              <div class="h-captcha" data-captcha="true" data-lang="es"></div>
+
+              <div class="f-nav">
+                <button type="button" class="btn btn--ghost" id="f-back">Atrás</button>
+                <button type="submit" class="btn btn--navy" id="f-submit">Quiero mi valoración gratuita</button>
+              </div>
+              <p class="f-trust">Gratis y sin compromiso · Respuesta en 24–48 h · Trato directo con Sonia</p>
+            </fieldset>
           </form>
-          <script src="https://web3forms.com/client/script.js" async defer></script>
+          <div id="f-result" class="f-msg" role="status" aria-live="polite" tabindex="-1"></div>
 
-          <p class="micro">Al enviar aceptas la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/">política de privacidad</a>. Sin spam. Puedes darte de baja cuando quieras.</p>
+          <!-- Información básica de protección de datos (primera capa). Validar con Sonia / su asesor. -->
+          <p class="rgpd"><strong>Protección de datos.</strong> Responsable: Sonia Guirao (TuCasaPro). Finalidad: responder a tu solicitud de valoración y contactarte. Legitimación: tu consentimiento. Destinatarios: proveedores de recepción del formulario (Web3Forms) y verificación antispam (hCaptcha), con posibles transferencias internacionales con garantías adecuadas. Derechos: acceso, rectificación, supresión y demás derechos escribiendo a <a href="mailto:vender@tucasapro.es">vender@tucasapro.es</a>. Más información en la <a href="https://www.tucasapro.es/eu-politica-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>.</p>
         </div>
       </div>
     </section>
 
+    <!-- ═════════ PAPELES Y COSTES EN REUS (contenido local, con fuentes) ═════════ -->
+    <section class="sec sec--sand" id="papeles">
+      <div class="wrap">
+        <h2 class="center">Vender en Reus: papeles y costes del vendedor</h2>
+        <p class="lead center" style="max-width:60ch;margin:1rem auto 0">Lo que te van a pedir en notaría y lo que pagas tú como vendedor, explicado sin letra pequeña. Lo reviso contigo antes de publicar.</p>
+        <div class="docs">
+          <div class="docs__card">
+            <h3>Documentos para vender un piso de segunda mano en Cataluña</h3>
+            <ul class="docs__list">
+              <li><strong>Cédula de habitabilidad</strong><span>Acredita que la vivienda cumple las condiciones mínimas para vivir en ella.</span></li>
+              <li><strong>Certificado de eficiencia energética</strong><span>Obligatorio para vender. Además, la etiqueta debe aparecer en el anuncio.</span></li>
+              <li><strong>Certificado de aptitud del edificio (ITE)</strong><span>Solo si el edificio está obligado a pasar la inspección técnica.</span></li>
+              <li><strong>Certificado de deudas con la comunidad</strong><span>Lo emite el administrador de fincas y confirma que estás al corriente.</span></li>
+              <li><strong>Escritura y nota simple</strong><span>Para comprobar titularidad y cargas. Si hay hipoteca, también su documentación.</span></li>
+            </ul>
+          </div>
+          <div class="docs__card">
+            <h3>Lo que paga el vendedor</h3>
+            <ul class="docs__list">
+              <li><strong>Plusvalía municipal (IIVTNU)</strong><span>La paga el vendedor y se gestiona ante el Ajuntament de Reus. Si el suelo no ha ganado valor entre la compra y la venta, no se paga; y puedes pedir que se calcule sobre la ganancia real si sale menos.</span></li>
+              <li><strong>IRPF por la ganancia</strong><span>La diferencia entre lo que pagaste y lo que cobras tributa en la renta. En vivienda habitual puede haber exención (reinversión o mayores de 65): confírmalo con tu asesor fiscal.</span></li>
+              <li><strong>Cancelación de la hipoteca</strong><span>Si queda deuda, se cancela con el dinero de la venta el mismo día de la firma.</span></li>
+              <li><strong>Certificados y gestiones previas</strong><span>Certificado energético, cédula o ITE si te faltan. Mejor tenerlos antes de publicar que correr antes de notaría.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="docs__note">Información general, no asesoramiento legal ni fiscal. <details style="display:inline"><summary>Ver fuentes</summary><p><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2021-18276" target="_blank" rel="noopener">Real Decreto-ley 26/2021 (plusvalía)</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176" target="_blank" rel="noopener">Real Decreto 390/2021 (certificado energético)</a>, <a href="https://sede.agenciatributaria.gob.es/Sede/irpf.html" target="_blank" rel="noopener">Agencia Tributaria (IRPF)</a> y Ley 18/2007 del derecho a la vivienda de Cataluña.</p></details></div>
+      </div>
+    </section>
+
     <!-- ═════════ PROCESO ═════════ -->
-    <section class="sec">
+    <section class="sec" id="como-funciona">
       <div class="wrap--text">
         <h2 class="center">Cómo funciona</h2>
         <ol class="steps">
-          <li><div><strong>Mini diagnóstico</strong><span>Llamada de 10–15 min para entender tu situación y objetivo de venta.</span></div></li>
-          <li><div><strong>Valoración por microzona</strong><span>Datos reales de cierre en tu barrio de Tarragona. Un rango defendible, no un número cogido del aire.</span></div></li>
-          <li><div><strong>Checklist documental</strong><span>Auditamos los papeles y preparamos el expediente de venta completo antes de publicar.</span></div></li>
-          <li><div><strong>Salida a mercado con estrategia</strong><span>Presentación, precio, filtros y canales para reducir visitas inútiles al máximo.</span></div></li>
-          <li><div><strong>Negociación y cierre</strong><span>Seguimiento hasta firma. Cierre seguro y sin fricciones.</span></div></li>
+          <li><div><strong>Mini diagnóstico</strong><span>Llamada de 10–15 min para entender tu situación y tu objetivo de venta.</span></div></li>
+          <li><div><strong>Valoración por microzona</strong><span>Operaciones reales de tu zona de Reus. Un rango defendible, no un número cogido del aire.</span></div></li>
+          <li><div><strong>Checklist documental</strong><span>Reviso los papeles y preparo el expediente de venta completo antes de publicar.</span></div></li>
+          <li><div><strong>Salida a mercado con estrategia</strong><span>Presentación, precio, filtros y canales para reducir al máximo las visitas inútiles.</span></div></li>
+          <li><div><strong>Negociación y cierre</strong><span>Te acompaño hasta la firma. Cierre seguro y sin fricciones.</span></div></li>
         </ol>
+        <div class="actions" style="margin-top:2rem">
+          <a href="#valoracion" class="btn btn--navy">Empezar por la valoración</a>
+        </div>
       </div>
     </section>
 
     <!-- ═════════ FAQ ═════════ -->
-    <section class="sec sec--sand">
+    <section class="sec sec--sand" id="preguntas">
       <div class="wrap--text">
-        <h2 class="center">Lo que suele preguntar quien vende en Tarragona</h2>
+        <h2 class="center">Lo que suele preguntar quien vende en Reus</h2>
         <ul class="faq">
           <li class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="faq-1">¿Cuánto vale mi piso en Tarragona?</button>
-            <div class="faq__a" id="faq-1" role="region"><p>Depende de la zona, el estado y la demanda real del momento. Te damos un rango defendible y el porqué, basado en cierres reales en tu barrio, no en portales con datos desfasados.</p></div>
+            <button class="faq__q" id="faq-q1" aria-expanded="false" aria-controls="faq-1">¿Cuánto vale mi piso en Reus?</button>
+            <div class="faq__a" id="faq-1" role="region" aria-labelledby="faq-q1"><p>Depende de la zona, la planta, si tiene ascensor, balcón o terraza, el estado y la demanda real del momento. Te doy un rango defendible y el porqué, basado en operaciones reales de tu zona de Reus, no en portales con datos desfasados.</p></div>
           </li>
           <li class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="faq-2">¿Qué documentación necesito para vender?</button>
-            <div class="faq__a" id="faq-2" role="region"><p>Nota simple, certificado energético, cédula de habitabilidad, escrituras... Lo ordenamos todo con un checklist antes de publicar para evitar cualquier retraso legal.</p></div>
+            <button class="faq__q" id="faq-q2" aria-expanded="false" aria-controls="faq-2">¿Qué papeles necesito para vender un piso de segunda mano en Reus?</button>
+            <div class="faq__a" id="faq-2" role="region" aria-labelledby="faq-q2"><p>En Cataluña se entrega la cédula de habitabilidad, el certificado de eficiencia energética, el certificado de aptitud de la inspección técnica del edificio si el edificio está obligado a pasarla, el certificado de deudas con la comunidad y, si hay hipoteca, su documentación. Lo reviso todo con un checklist antes de publicar.</p></div>
           </li>
           <li class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="faq-3">¿Puedo vender si tengo hipoteca o herencia?</button>
-            <div class="faq__a" id="faq-3" role="region"><p>Sí. En la mayoría de casos se puede gestionar sin problema. La clave es planificarlo bien desde el inicio para que la operación no se bloquee a mitad del proceso.</p></div>
+            <button class="faq__q" id="faq-q3" aria-expanded="false" aria-controls="faq-3">¿Quién paga la plusvalía municipal al vender en Reus?</button>
+            <div class="faq__a" id="faq-3" role="region" aria-labelledby="faq-q3"><p>En una compraventa la paga el vendedor y se gestiona ante el Ajuntament de Reus. Si no ha habido ganancia entre el precio de compra y el de venta del suelo, no se paga, y puedes pedir que se calcule sobre la ganancia real si te sale menos que con el método objetivo.</p></div>
           </li>
           <li class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="faq-4">¿Cuánto se tarda en vender?</button>
-            <div class="faq__a" id="faq-4" role="region"><p>Sin promesas de plazos imposibles. Con precio y papeles bien desde el primer día, se reduce la fricción y las visitas inútiles.</p></div>
+            <button class="faq__q" id="faq-q4" aria-expanded="false" aria-controls="faq-4">¿Tengo que pagar IRPF por vender mi vivienda?</button>
+            <div class="faq__a" id="faq-4" role="region" aria-labelledby="faq-q4"><p>La ganancia que obtengas tributa en el IRPF. Si es tu vivienda habitual puede quedar exenta en algunos casos, por ejemplo si reinviertes en otra vivienda habitual o si tienes más de 65 años. Conviene confirmarlo con tu asesor fiscal antes de fijar el precio.</p></div>
           </li>
           <li class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="faq-5">¿Qué pasa si todavía no sé si quiero vender?</button>
-            <div class="faq__a" id="faq-5" role="region"><p>Perfecto: hacemos la valoración y el plan, y decides con perspectiva real. Sin presión y sin compromiso.</p></div>
+            <button class="faq__q" id="faq-q5" aria-expanded="false" aria-controls="faq-5">¿Puedo vender si tengo hipoteca o herencia?</button>
+            <div class="faq__a" id="faq-5" role="region" aria-labelledby="faq-q5"><p>Sí. En la mayoría de casos se puede gestionar sin problema: la hipoteca se cancela con la venta y la herencia debe estar aceptada (y normalmente inscrita a nombre de los herederos) antes de firmar. La clave es planificarlo desde el inicio para que la operación no se bloquee.</p></div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__q" id="faq-q6" aria-expanded="false" aria-controls="faq-6">¿Qué pasa si todavía no sé si quiero vender?</button>
+            <div class="faq__a" id="faq-6" role="region" aria-labelledby="faq-q6"><p>Perfecto: hago la valoración gratuita y el plan, y decides con perspectiva real. Sin presión y sin compromiso.</p></div>
           </li>
         </ul>
       </div>
@@ -569,20 +740,28 @@
         <h2>Trato directo. Plan claro. Sin letra pequeña.</h2>
         <p class="lead">Sin call centers y sin mareos. Con un método que funciona.</p>
         <div class="actions">
-          <a href="#valoracion" class="btn btn--gold">Quiero mi valoración + plan de venta</a>
+          <a href="#valoracion" class="btn btn--gold">Quiero mi valoración gratuita</a>
         </div>
-        <p class="micro">Respuesta en 24–48 h · Sin presión</p>
+        <p class="micro">Valoración gratuita · Respuesta en 24–48 h · Sin compromiso</p>
+        <p class="micro" style="margin-top:2rem">También vendo en:</p>
+        <ul class="zonas">
+          <li><a href="/">Tarragona</a></li>
+          <li><span aria-current="page">Reus</span></li>
+          <li><a href="/cambrils/">Cambrils</a></li>
+          <li><a href="/salou/">Salou</a></li>
+          <li><a href="/vila-seca/">Vila-seca</a></li>
+        </ul>
       </div>
     </section>
 
   </main>
 
   <!-- ═════════ CONTACTO ═════════ -->
-  <section class="contact" aria-label="Datos de contacto">
+  <section class="contact" id="contacto" aria-label="Datos de contacto">
     <div class="wrap">
       <dl class="contact__grid">
         <div><dt>Teléfono</dt><dd><a href="tel:+34640872514">+34 640 87 25 14</a></dd></div>
-        <div><dt>Correo electrónico</dt><dd><a href="mailto:info@soniaguiraoinmobiliaria.com">info@soniaguiraoinmobiliaria.com</a></dd></div>
+        <div><dt>Correo electrónico</dt><dd><a href="mailto:vender@tucasapro.es">vender@tucasapro.es</a></dd></div>
         <div><dt>Dirección</dt><dd>Vila-seca, Tarragona 43480</dd></div>
       </dl>
     </div>
@@ -595,27 +774,30 @@
         <li><a href="https://www.tucasapro.es/eu-politica-de-privacidad/">Política de privacidad</a></li>
         <li><a href="https://www.tucasapro.es/es-politica-cookies">Política de cookies</a></li>
         <li><a href="https://www.tucasapro.es/terminos-y-condiciones/">Términos y condiciones</a></li>
-        <li><a href="https://g.page/r/CQo1BlI00f86EBM/review/">Califica mi servicio</a></li>
+        <li><button type="button" class="linkbtn" id="cookies-open">Configurar cookies</button></li>
       </ul>
       <p>© 2026 Sonia Guirao · TuCasaPro · eXp Realty</p>
+      <!-- ★ PENDIENTE: número de inscripción en el Registro de Agentes Inmobiliarios de Cataluña (AICAT), obligatorio en la publicidad. Ej.: <p>Agente inscrita en el Registro AICAT nº XXXX</p> -->
     </div>
   </footer>
 
   <!-- WhatsApp flotante -->
-  <a class="wa" href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20quiero%20una%20valoraci%C3%B3n%20de%20mi%20vivienda%20en%20Tarragona" aria-label="Escribir a Sonia por WhatsApp">
+  <a class="wa" href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20quiero%20una%20valoraci%C3%B3n%20de%20mi%20vivienda%20en%20Reus" target="_blank" rel="noopener" aria-label="Escribir a Sonia por WhatsApp">
     <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/></svg>
   </a>
 
   <!-- Aviso de cookies: Google Analytics solo se carga si la persona acepta -->
   <div class="cookies on-dark" id="cookies" role="dialog" aria-label="Aviso de cookies" hidden>
-    <p>Usamos cookies analíticas (Google Analytics) para medir el uso de esta página. Puedes aceptarlas o rechazarlas. Más información en la <a href="https://www.tucasapro.es/es-politica-cookies">política de cookies</a>.</p>
+    <p>Usamos cookies analíticas (Google Analytics) para medir el uso de esta página. Puedes aceptarlas o rechazarlas, y cambiar tu decisión cuando quieras desde «Configurar cookies» al pie de la página. Más información en la <a href="https://www.tucasapro.es/es-politica-cookies">política de cookies</a>.</p>
     <div class="cookies__btns">
       <button type="button" class="btn btn--gold" id="cookies-yes">Aceptar</button>
-      <button type="button" class="btn btn--line" id="cookies-no">Rechazar</button>
+      <button type="button" class="btn btn--gold" id="cookies-no">Rechazar</button>
     </div>
   </div>
 
   <script>
+    var MUNICIPIO_SLUG = 'reus';   /* ★ cambiar en cada landing */
+
     /* FAQ */
     (function () {
       var items = document.querySelectorAll('.faq__item');
@@ -638,13 +820,15 @@
       });
     })();
 
-    /* Cookies + GA4 (sustituye G-XXXXXXXXXX por el ID de medición de Sonia) */
+    /* Cookies + GA4 (solo tras aceptar) */
     (function () {
-      var GA_ID = 'G-XXXXXXXXXX';
+      var GA_ID = 'G-NNNFZMSPQF';
       var banner = document.getElementById('cookies');
+      var gaLoaded = false;
 
       function loadGA() {
-        if (GA_ID === 'G-XXXXXXXXXX') return;
+        if (!GA_ID || gaLoaded) return;
+        gaLoaded = true;
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -652,7 +836,19 @@
         window.dataLayer = window.dataLayer || [];
         window.gtag = function () { dataLayer.push(arguments); };
         gtag('js', new Date());
-        gtag('config', GA_ID, { content_group: 'tarragona' });
+        gtag('config', GA_ID, { content_group: MUNICIPIO_SLUG });
+      }
+      function clearGA() {
+        var host = location.hostname, parts = host.split('.');
+        var domains = ['', host, '.' + host, '.' + parts.slice(-2).join('.')];
+        document.cookie.split(';').forEach(function (c) {
+          var name = c.split('=')[0].trim();
+          if (/^_ga/.test(name)) {
+            domains.forEach(function (d) {
+              document.cookie = name + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : '');
+            });
+          }
+        });
       }
       function save(v) { try { localStorage.setItem('cookies-choice', v); } catch (e) {} }
 
@@ -665,48 +861,136 @@
         save('yes'); banner.hidden = true; loadGA();
       });
       document.getElementById('cookies-no').addEventListener('click', function () {
-        save('no'); banner.hidden = true;
+        save('no'); banner.hidden = true; clearGA();
+        if (gaLoaded) location.reload();   /* detiene GA si estaba cargado */
+      });
+      document.getElementById('cookies-open').addEventListener('click', function () {
+        banner.hidden = false;
+        document.getElementById('cookies-yes').focus();
       });
     })();
 
-    /* Formulario Web3Forms */
+    /* Formulario Web3Forms en 2 pasos */
     (function () {
       var form = document.getElementById('lead-form');
       if (!form) return;
+      var step1 = document.getElementById('f-step-1');
+      var step2 = document.getElementById('f-step-2');
       var res = document.getElementById('f-result');
       var btn = document.getElementById('f-submit');
-      var q = new URLSearchParams(location.search);
-      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
-        if (q.get(k)) form.elements[k].value = q.get(k);
-      });
-      form.elements['pagina'].value = location.href.split('#')[0];
+      var FALLBACK = 'No se ha podido enviar. Inténtalo de nuevo o llama al 640 87 25 14.';
 
-      function show(cls, txt) { res.className = 'f-msg ' + cls; res.textContent = txt; }
+      function track(name, params) { if (window.gtag) gtag('event', name, params || {}); }
+
+      /* UTM y página de origen (recortados, solo texto) */
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
+        var v = q.get(k);
+        if (v) form.elements[k].value = v.slice(0, 100);
+      });
+      form.elements['pagina'].value = (location.origin + location.pathname).slice(0, 200);
+
+      /* hCaptcha se carga solo al llegar al paso 2 (menos peso y menos terceros para quien no rellena) */
+      var captchaLoaded = false;
+      function loadCaptcha() {
+        if (captchaLoaded) return;
+        captchaLoaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://web3forms.com/client/script.js';
+        s.async = true;
+        document.body.appendChild(s);
+      }
+
+      function validGroup(container) {
+        var fields = container.querySelectorAll('input, select, textarea');
+        for (var i = 0; i < fields.length; i++) {
+          if (!fields[i].checkValidity()) { fields[i].reportValidity(); return false; }
+        }
+        return true;
+      }
+      function phoneOk() {
+        var tel = form.elements['telefono'];
+        var digits = tel.value.replace(/\D/g, '');
+        if (digits.length < 9 || digits.length > 15) {
+          tel.setCustomValidity('Introduce un teléfono válido, por ejemplo 600 123 456');
+        } else { tel.setCustomValidity(''); }
+        return tel.checkValidity();
+      }
+      form.elements['telefono'].addEventListener('input', function () { this.setCustomValidity(''); });
+
+      function goTo(n) {
+        step1.hidden = n !== 1;
+        step2.hidden = n !== 2;
+        res.className = 'f-msg'; res.textContent = '';
+        if (n === 2) loadCaptcha();
+        var first = (n === 1 ? step1 : step2).querySelector('select, input:not([type=hidden])');
+        if (first) first.focus({ preventScroll: true });
+        document.getElementById('valoracion').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      /* Planta y ascensor solo si es piso (desactivados no se validan ni se envían) */
+      var tipo = document.getElementById('f-tipo'), pisoRow = document.getElementById('f-piso');
+      function syncPiso() {
+        var esPiso = tipo.value !== 'Casa';
+        pisoRow.hidden = !esPiso;
+        pisoRow.querySelectorAll('select').forEach(function (el) { el.disabled = !esPiso; });
+      }
+      tipo.addEventListener('change', syncPiso); syncPiso();
+
+      step2.hidden = true;   /* sin JavaScript se ven los dos pasos y el formulario sigue funcionando */
+      var started = false;
+      form.addEventListener('focusin', function () {
+        if (!started) { started = true; track('form_start', { municipio: MUNICIPIO_SLUG }); }
+      });
+
+      document.getElementById('f-next').addEventListener('click', function () {
+        if (!validGroup(step1)) return;
+        track('form_step_1', { municipio: MUNICIPIO_SLUG });
+        goTo(2);
+      });
+      document.getElementById('f-back').addEventListener('click', function () { goTo(1); });
+
+      function show(cls, txt) { res.className = 'f-msg ' + cls; res.textContent = txt; res.focus(); }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (!step1.hidden) {   /* Enter en el paso 1 = pasar al paso 2 */
+          if (validGroup(step1)) { track('form_step_1', { municipio: MUNICIPIO_SLUG }); goTo(2); }
+          return;
+        }
+        phoneOk();
+        if (!validGroup(step2)) return;
         var cap = form.querySelector('textarea[name=h-captcha-response]');
-        if (cap && !cap.value) { show('err', 'Marca la casilla de verificación "No soy un robot" antes de enviar.'); return; }
+        if (!cap || !cap.value) { show('err', 'Marca la casilla «Soy humano» de la verificación antes de enviar.'); return; }
+
         var data = {};
-        new FormData(form).forEach(function (v, k) { data[k] = v; });
+        new FormData(form).forEach(function (v, k) { data[k] = typeof v === 'string' ? v.trim() : v; });
         btn.disabled = true; var label = btn.textContent; btn.textContent = 'Enviando…';
+
         fetch(form.action, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(data)
-        }).then(function (r) { return r.json().then(function (j) { return { ok: r.status === 200, j: j }; }); })
+        })
+          .then(function (r) {
+            return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false }; });
+          })
           .then(function (o) {
             if (o.ok) {
-              form.reset(); show('ok', '¡Recibido! Sonia te contactará en menos de 24 h laborables con tu valoración.');
-              if (window.gtag) gtag('event', 'generate_lead', { municipio: 'tarragona' });
-            } else { show('err', (o.j && o.j.message) || 'No se pudo enviar. Inténtalo de nuevo o llama al 640 87 25 14.'); }
+              form.hidden = true;
+              res.className = 'f-msg ok';
+              res.innerHTML = '<strong>¡Recibido!</strong> Te contactaré en 24–48 h con tu valoración. ¿Tienes prisa? <a href="https://wa.me/34640872514?text=Hola%20Sonia%2C%20acabo%20de%20pedir%20mi%20valoraci%C3%B3n%20en%20Reus" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>.';
+              res.focus();
+              track('generate_lead', { municipio: MUNICIPIO_SLUG });
+            } else {
+              show('err', FALLBACK);
+              if (window.hcaptcha) { try { hcaptcha.reset(); } catch (err) {} }
+            }
           })
-          .catch(function () { show('err', 'Error de conexión. Inténtalo de nuevo o llama al 640 87 25 14.'); })
+          .catch(function () { show('err', 'Error de conexión. ' + FALLBACK); })
           .then(function () { btn.disabled = false; btn.textContent = label; });
       });
     })();
-
   </script>
 
 </body>
