@@ -1,0 +1,6 @@
+# vender.tucasapro.es
+# Permite el rastreo a buscadores y asistentes de IA (Google, Bing, ChatGPT, Perplexity, Claude...)
+User-agent: *
+Allow: /
+
+Sitemap: https://vender.tucasapro.es/sitemap.xml
